@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-311/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Objectifs généraux du cours Ce cours vous permettra de :
+Concevoir et programmer des applications en Java en utilisant les principales structures de données.
+Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).
+Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.
+Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.
+Pourquoi étudier les structures de données ? Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Structures de donnée">
+    <meta name="twitter:description" content="Objectifs généraux du cours Ce cours vous permettra de :
+Concevoir et programmer des applications en Java en utilisant les principales structures de données.
+Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).
+Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.
+Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.
+Pourquoi étudier les structures de données ? Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.">
+    <meta property="og:url" content="http://localhost:1313/420-311/index.html">
+    <meta property="og:site_name" content="Structures de donnée">
+    <meta property="og:title" content="Structures de donnée">
+    <meta property="og:description" content="Objectifs généraux du cours Ce cours vous permettra de :
+Concevoir et programmer des applications en Java en utilisant les principales structures de données.
+Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).
+Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.
+Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.
+Pourquoi étudier les structures de données ? Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Structures de donnée">
+    <meta itemprop="description" content="Objectifs généraux du cours Ce cours vous permettra de :
+Concevoir et programmer des applications en Java en utilisant les principales structures de données.
+Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).
+Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.
+Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.
+Pourquoi étudier les structures de données ? Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.">
+    <meta itemprop="wordCount" content="372">
+    <title>Structures de donnée</title>
+    <link href="/420-311/index.xml" rel="alternate" type="application/rss+xml" title="Structures de donnée"><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1755784287" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1755784287" defer></script>
+    <script src="/420-311/js/search-lunr.js?1755784287" defer></script>
+    <script src="/420-311/js/search.js?1755784287" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1755784287";
+    </script>
+    <script src="/420-311/js/lunr/lunr.min.js?1755784287" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1755784287" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1755784287" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1755784287" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755784287" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755784287" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1755784287" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1755784287" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1755784287" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/index.html';
+      window.relearn.relBasePath='.';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-311';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/420-311/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#objectifs-généraux-du-cours">Objectifs généraux du cours</a></li>
+    <li><a href="#pourquoi-étudier-les-structures-de-données-">Pourquoi étudier les structures de données ?</a></li>
+    <li><a href="#-notion-de-structure-de-données"><!-- raw HTML omitted -->🌼 Notion de structure de données<!-- raw HTML omitted --></a></li>
+    <li><a href="#-les-structures-de-données-en-java"><!-- raw HTML omitted -->🌼 Les structures de données en Java<!-- raw HTML omitted --></a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Structures de donnée</span><meta itemprop="position" content="1"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-left"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/intro/index.html" title="Préalables (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable home" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="home">
+  <header class="headline">
+  </header>
+
+<h1 id="structures-de-donnée">Structures de donnée</h1>
+
+<h2 id="objectifs-généraux-du-cours">Objectifs généraux du cours</h2>
+<p>Ce cours vous permettra de :</p>
+<ul>
+<li>
+<p>Concevoir et programmer des applications en Java en utilisant les principales structures de données.</p>
+</li>
+<li>
+<p>Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).</p>
+</li>
+<li>
+<p>Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.</p>
+</li>
+<li>
+<p>Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.</p>
+</li>
+</ul>
+<h2 id="pourquoi-étudier-les-structures-de-données-">Pourquoi étudier les structures de données ?</h2>
+<ul>
+<li>
+<p>Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.</p>
+</li>
+<li>
+<p>Parce qu’elles permettent de réduire le temps d’exécution et économiser de la mémoire.</p>
+</li>
+<li>
+<p>Parce qu’elles développent la capacité à choisir la bonne approche selon un problème donné.</p>
+</li>
+<li>
+<p>Parce qu’elles forment une base solide pour les cours ultérieurs et pour travailler dans des projets d’envergure.</p>
+</li>
+</ul>
+<blockquote>
+<p>Citation classique : « Un bon algorithme mal implanté dans une mauvaise structure de données sera inefficace.
+Une bonne structure de données peut transformer un problème complexe en une solution élégante. »</p></blockquote>
+<h2 id="-notion-de-structure-de-données"><!-- raw HTML omitted -->🌼 Notion de structure de données<!-- raw HTML omitted --></h2>
+<p>Le principe de base d&rsquo;une structure de données, c&rsquo;est de stocker des éléments auxquels le programmeur veut pouvoir accéder plus tard. On appelle les différentes utilisations possibles de la structure de données des opérations.</p>
+<h2 id="-les-structures-de-données-en-java"><!-- raw HTML omitted -->🌼 Les structures de données en Java<!-- raw HTML omitted --></h2>
+<ul>
+<li>
+<p>Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util).</p>
+</li>
+<li>
+<p>On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.</p>
+</li>
+<li>
+<p>Nous commencerons par examiner les concepts communs qu’elles (structures de données) exploitent ainsi : généricité, itérateur, ordonnancement et relation d’ordre.</p>
+</li>
+<li>
+<p>Nous verrons également quelles sont les opérations qui leur sont communes : ajout ou suppression d’éléments, construction à partir des éléments d’une autre collection&hellip;</p>
+</li>
+<li>
+<p>Nous étudierons ensuite en détail chacune de ces structures, à savoir :</p>
+<pre><code>  🗝 Les listes, implémentées par la classe LinkedList;
+
+  🗝 Les vecteurs dynamiques, implémentés par les classes ArrayList et Vector;
+
+  🗝 Les ensembles, implémentés par les classes HashSet et TreeSet;
+
+  🗝 Les queues avec priorité, implémentées par la classe PriorityQueue (introduite par le JDK 5.0) ;
+
+  🗝 Les queues à double entrée, implémentées par la classe ArrayDeque (introduite par Java6).
+</code></pre>
+</li>
+</ul>
+<p><a href="#R-image-43889a3cb341030a923f707bae6470f1" class="lightbox-link"><img alt="Java collection hierarchy" class="lazy lightbox figure-image" loading="lazy" src="/420-311/images/Collection_Hierarchy.jpg" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-43889a3cb341030a923f707bae6470f1"><img alt="Java collection hierarchy" class="lazy lightbox lightbox-image" loading="lazy" src="/420-311/images/Collection_Hierarchy.jpg"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-311/index.html" style="display:inline-flex; align-items:center;">
+    <img src="/420-311/images/logo.png" width="35%" alt="logo">
+    <span style="font-size: 140%; white-space:normal;">Structures de donnée</span>
+</a>
+        </div>
+        <search><form action="/420-311/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="active " data-nav-id="/420-311/index.html"><a class="padding" href="/420-311/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-311/intro/index.html"><a class="padding" href="/420-311/intro/index.html">1. Préalables</a><ul id="R-subsections-58f2a84c91d5deefe8bdd3a21213404a" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer">          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <div class="logo-title">Sara Boumehraz</div>
+            <br/>
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+          </a>
+          <br>Creative Commons BY-NC-SA</br></div>
+      </div>
+    </aside>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1755784287" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1755784287" defer></script>
+    <script src="/420-311/js/theme.js?1755784287" defer></script>
+  </body>
+</html>

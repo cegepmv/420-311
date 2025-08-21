@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-311/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Exercices théoriques Exercice 1 : Quel est le résultat du code suivant:
+public class Question1 { public static int methode1() { int i = 0; i&#43;&#43;; return i; } public static void main(String[] args) { methode1(); int j = 12; j = methode1(); System.out.println(j); } }Exercice 2 : Quel est le résultat du code suivant:
+public class Question2 { public static void main (String[] args) { try { int i, sum; sum = 10; for (i = -1; i &lt; 3 ;&#43;&#43;i) { sum = (sum / i); System.out.println(i); } } catch(Exception e) { System.out.print(&#34;Erreur!&#34;); }	} }Exercice 3 : Quel est le résultat du code suivant:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Exercices :: Structures de donnée">
+    <meta name="twitter:description" content="Exercices théoriques Exercice 1 : Quel est le résultat du code suivant:
+public class Question1 { public static int methode1() { int i = 0; i&#43;&#43;; return i; } public static void main(String[] args) { methode1(); int j = 12; j = methode1(); System.out.println(j); } }Exercice 2 : Quel est le résultat du code suivant:
+public class Question2 { public static void main (String[] args) { try { int i, sum; sum = 10; for (i = -1; i &lt; 3 ;&#43;&#43;i) { sum = (sum / i); System.out.println(i); } } catch(Exception e) { System.out.print(&#34;Erreur!&#34;); }	} }Exercice 3 : Quel est le résultat du code suivant:">
+    <meta property="og:url" content="http://localhost:1313/420-311/intro/exercices/index.html">
+    <meta property="og:site_name" content="Structures de donnée">
+    <meta property="og:title" content="Exercices :: Structures de donnée">
+    <meta property="og:description" content="Exercices théoriques Exercice 1 : Quel est le résultat du code suivant:
+public class Question1 { public static int methode1() { int i = 0; i&#43;&#43;; return i; } public static void main(String[] args) { methode1(); int j = 12; j = methode1(); System.out.println(j); } }Exercice 2 : Quel est le résultat du code suivant:
+public class Question2 { public static void main (String[] args) { try { int i, sum; sum = 10; for (i = -1; i &lt; 3 ;&#43;&#43;i) { sum = (sum / i); System.out.println(i); } } catch(Exception e) { System.out.print(&#34;Erreur!&#34;); }	} }Exercice 3 : Quel est le résultat du code suivant:">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Préalables">
+    <meta itemprop="name" content="Exercices :: Structures de donnée">
+    <meta itemprop="description" content="Exercices théoriques Exercice 1 : Quel est le résultat du code suivant:
+public class Question1 { public static int methode1() { int i = 0; i&#43;&#43;; return i; } public static void main(String[] args) { methode1(); int j = 12; j = methode1(); System.out.println(j); } }Exercice 2 : Quel est le résultat du code suivant:
+public class Question2 { public static void main (String[] args) { try { int i, sum; sum = 10; for (i = -1; i &lt; 3 ;&#43;&#43;i) { sum = (sum / i); System.out.println(i); } } catch(Exception e) { System.out.print(&#34;Erreur!&#34;); }	} }Exercice 3 : Quel est le résultat du code suivant:">
+    <meta itemprop="wordCount" content="930">
+    <title>Exercices :: Structures de donnée</title><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1755783655" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1755783655" defer></script>
+    <script src="/420-311/js/search-lunr.js?1755783655" defer></script>
+    <script src="/420-311/js/search.js?1755783655" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1755783655";
+    </script>
+    <script src="/420-311/js/lunr/lunr.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1755783655" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755783655" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755783655" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1755783655" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1755783655" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1755783655" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/intro\/exercices\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-311';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/420-311/intro/exercices/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#exercices-théoriques">Exercices théoriques</a>
+      <ul>
+        <li><a href="#exercice-1-">Exercice 1 :</a></li>
+        <li><a href="#exercice-2-">Exercice 2 :</a></li>
+        <li><a href="#exercice-3-">Exercice 3 :</a></li>
+        <li><a href="#exercice-4-">Exercice 4 :</a></li>
+        <li><a href="#exercice-5-">Exercice 5 :</a></li>
+        <li><a href="#exercice-6-">Exercice 6 :</a></li>
+        <li><a href="#exercice-7-">Exercice 7 :</a></li>
+        <li><a href="#exercice-8-">Exercice 8 :</a></li>
+        <li><a href="#exercice-9-">Exercice 9 :</a></li>
+        <li><a href="#exercice-10-">Exercice 10 :</a></li>
+        <li><a href="#exercice-11-">Exercice 11 :</a></li>
+        <li><a href="#exercice-12-">Exercice 12 :</a></li>
+        <li><a href="#exercice-13-">Exercice 13 :</a></li>
+        <li><a href="#exercice-14-">Exercice 14 :</a></li>
+        <li><a href="#exercice-15-">Exercice 15 :</a></li>
+        <li><a href="#exercice-19-">Exercice 19 :</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/index.html"><span itemprop="name">Structures de donnée</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Exercices</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/intro/revisionpoo/index.html" title="Révision (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable intro" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="exercices">Exercices</h1>
+
+<h2 id="exercices-théoriques">Exercices théoriques</h2>
+<h3 id="exercice-1-">Exercice 1 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question1</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">methode1</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>		i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> i;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>		methode1();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 12;
+</span></span><span style="display:flex;"><span>		j <span style="color:#f92672">=</span> methode1();
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(j);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-2-">Exercice 2 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question2</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> (String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> i, sum;
+</span></span><span style="display:flex;"><span>                sum <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1; i <span style="color:#f92672">&lt;</span> 3 ;<span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>                    sum <span style="color:#f92672">=</span> (sum <span style="color:#f92672">/</span> i);
+</span></span><span style="display:flex;"><span>                    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>		} <span style="color:#66d9ef">catch</span>(Exception e) {     	
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Erreur!&#34;</span>);
+</span></span><span style="display:flex;"><span>		}	
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-3-">Exercice 3 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question3</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span>args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> val1 <span style="color:#f92672">=</span> 9;          
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> val2 <span style="color:#f92672">=</span> 9;         
+</span></span><span style="display:flex;"><span>        String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9&#34;</span>;          
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(val1 <span style="color:#f92672">+</span> val2 <span style="color:#f92672">+</span> str);	
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-4-">Exercice 4 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question4</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span>args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> a, b;
+</span></span><span style="display:flex;"><span>            b <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>            a <span style="color:#f92672">=</span> 5 <span style="color:#f92672">/</span> b;
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;A&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (Exception e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;B&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;C&#34;</span>);
+</span></span><span style="display:flex;"><span>        }	
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-5-">Exercice 5 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question5</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span>args) {
+</span></span><span style="display:flex;"><span>		String obj <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bonjour&#34;</span>;
+</span></span><span style="display:flex;"><span>		String obj1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bonsoir&#34;</span>;   
+</span></span><span style="display:flex;"><span>		String obj2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bonjour&#34;</span>;
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(obj.<span style="color:#a6e22e">equals</span>(obj1) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> obj.<span style="color:#a6e22e">equals</span>(obj2));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-6-">Exercice 6 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClasseA</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> j;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClasseB</span> <span style="color:#66d9ef">extends</span> ClasseA {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> j;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheToi</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> 3;
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> j);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question6</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>	   
+</span></span><span style="display:flex;"><span>		ClasseB obj <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ClasseB();
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> 2;
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">afficheToi</span>();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-7-">Exercice 7 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClasseA</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClasseB</span> <span style="color:#66d9ef">extends</span> ClasseA {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> j;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheToi</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> j <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span> ( j <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> i);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>		ClasseB obj <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ClasseB();
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> 2;
+</span></span><span style="display:flex;"><span>		obj.<span style="color:#a6e22e">afficheToi</span>();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-8-">Exercice 8 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question8</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> A <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;o&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> B <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">lastIndexOf</span>(<span style="color:#e6db74">&#39;l&#39;</span>);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(A <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> B);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-9-">Exercice 9 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question9</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> ch;
+</span></span><span style="display:flex;"><span>        ch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>.<span style="color:#a6e22e">charAt</span>(1);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(ch);     
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-10-">Exercice 10 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question10</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String chars<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> chars.<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1; j <span style="color:#f92672">&lt;</span> chars.<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span>j)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(chars<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.<span style="color:#a6e22e">compareTo</span>(chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span>) <span style="color:#f92672">==</span> 0)
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span>); 
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-11-">Exercice 11 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question11</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> a1<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> a2<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> { 1, 2, 3, 4, 5 };
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a1.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> a2.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-12-">Exercice 12 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question12</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> arr<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> { 1, 2, 3, 4, 5 };
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> arr.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 2; <span style="color:#f92672">++</span>i)
+</span></span><span style="display:flex;"><span>	    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);      
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-13-">Exercice 13 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question13</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> param1;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> param2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+</span></span><span style="display:flex;"><span>		param1 <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>		param2 <span style="color:#f92672">=</span> param1 <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>) {
+</span></span><span style="display:flex;"><span>		Question13 obj1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Question13();
+</span></span><span style="display:flex;"><span>		Question13 obj2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Question13();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 2;
+</span></span><span style="display:flex;"><span>		obj1.<span style="color:#a6e22e">add</span>(a, a <span style="color:#f92672">+</span> 1);
+</span></span><span style="display:flex;"><span>		obj2.<span style="color:#a6e22e">add</span>(5, a);
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(obj1.<span style="color:#a6e22e">param1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> obj2.<span style="color:#a6e22e">param2</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-14-">Exercice 14 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Arrays;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question14</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tab<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 5; i <span style="color:#f92672">&gt;</span> 0; i<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>			tab<span style="color:#f92672">[</span>5 <span style="color:#f92672">-</span> i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		Arrays.<span style="color:#a6e22e">sort</span>(tab);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> 5; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(tab<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>	    }     
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-15-">Exercice 15 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question15</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> param1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">increment</span>() {
+</span></span><span style="display:flex;"><span>		param1<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		Question15 obj1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Question15();
+</span></span><span style="display:flex;"><span>		Question15 obj2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Question15();
+</span></span><span style="display:flex;"><span>		obj1.<span style="color:#a6e22e">param1</span> <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>		obj1.<span style="color:#a6e22e">increment</span>();
+</span></span><span style="display:flex;"><span>		obj2.<span style="color:#a6e22e">increment</span>();
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(obj1.<span style="color:#a6e22e">param1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> obj2.<span style="color:#a6e22e">param1</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-19-">Exercice 19 :</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Question Vrai/Faux</th>
+          <th style="text-align: center">OUI ✔</th>
+          <th style="text-align: center">NON ❌</th>
+          <th style="text-align: center">NSP ❗</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1-  Est-ce que je peux instancier une Interface? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2-  Est-ce qu&rsquo;une interface est un objet? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3-  Est-ce qu’une interface hérite de la classe Object? ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4-  Est-ce qu’une interface peut hériter d&rsquo;une autre interface? ☁️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5-  Est-ce qu’une interface peut hériter d&rsquo;une classe? ☔</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6-  Est-ce qu&rsquo;une classe peut-être « private »? 🌊</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7-  Est-ce que chaque classe Java possède la méthode « toString() »? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8-  Est-ce que le constructeur d’une classe peut être « private »? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9-  Est-ce que chaque classe Java possède un constructeur ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10-  Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">11-  Est-ce qu’une interface peut hériter d&rsquo;une autre interface? ☔</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">12-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">13-  Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">14-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">15-  Est-ce qu’une interface peut être instanciée? ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-311/index.html" style="display:inline-flex; align-items:center;">
+    <img src="/420-311/images/logo.png" width="35%" alt="logo">
+    <span style="font-size: 140%; white-space:normal;">Structures de donnée</span>
+</a>
+        </div>
+        <search><form action="/420-311/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-311/index.html"><a class="padding" href="/420-311/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/420-311/intro/index.html"><a class="padding" href="/420-311/intro/index.html">1. Préalables</a><ul id="R-subsections-58f2a84c91d5deefe8bdd3a21213404a" class="collapsible-menu">
+            <li class="" data-nav-id="/420-311/intro/revisionpoo/index.html"><a class="padding" href="/420-311/intro/revisionpoo/index.html">Révision</a></li>
+            <li class="active " data-nav-id="/420-311/intro/exercices/index.html"><a class="padding" href="/420-311/intro/exercices/index.html">Exercices</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer">          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <div class="logo-title">Sara Boumehraz</div>
+            <br/>
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+          </a>
+          <br>Creative Commons BY-NC-SA</br></div>
+      </div>
+    </aside>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1755783655" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1755783655" defer></script>
+    <script src="/420-311/js/theme.js?1755783655" defer></script>
+  </body>
+</html>

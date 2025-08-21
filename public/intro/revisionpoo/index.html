@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-311/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Rappel : Concepts de base Classe : Modèle définissant les attributs (variables) et comportements (méthodes).
+Objet : Instance concrète d’une classe.
+Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).
+Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).
+Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Révision :: Structures de donnée">
+    <meta name="twitter:description" content="Rappel : Concepts de base Classe : Modèle définissant les attributs (variables) et comportements (méthodes).
+Objet : Instance concrète d’une classe.
+Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).
+Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).
+Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).">
+    <meta property="og:url" content="http://localhost:1313/420-311/intro/revisionpoo/index.html">
+    <meta property="og:site_name" content="Structures de donnée">
+    <meta property="og:title" content="Révision :: Structures de donnée">
+    <meta property="og:description" content="Rappel : Concepts de base Classe : Modèle définissant les attributs (variables) et comportements (méthodes).
+Objet : Instance concrète d’une classe.
+Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).
+Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).
+Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Préalables">
+    <meta itemprop="name" content="Révision :: Structures de donnée">
+    <meta itemprop="description" content="Rappel : Concepts de base Classe : Modèle définissant les attributs (variables) et comportements (méthodes).
+Objet : Instance concrète d’une classe.
+Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).
+Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).
+Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).">
+    <meta itemprop="wordCount" content="466">
+    <title>Révision :: Structures de donnée</title><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1755783655" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1755783655" defer></script>
+    <script src="/420-311/js/search-lunr.js?1755783655" defer></script>
+    <script src="/420-311/js/search.js?1755783655" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1755783655";
+    </script>
+    <script src="/420-311/js/lunr/lunr.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1755783655" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1755783655" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755783655" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1755783655" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1755783655" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1755783655" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1755783655" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/intro\/revisionpoo\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-311';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/420-311/intro/revisionpoo/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#concepts-de-base">Concepts de base</a></li>
+    <li><a href="#modificateurs-daccès">Modificateurs d’accès</a></li>
+    <li><a href="#syntaxe-essentielle">Syntaxe essentielle</a>
+      <ul>
+        <li><a href="#définir-une-classe">Définir une classe</a></li>
+        <li><a href="#créer-un-objet">Créer un objet</a></li>
+      </ul>
+    </li>
+    <li><a href="#héritage-et-polymorphisme">Héritage et polymorphisme</a></li>
+    <li><a href="#abstraction-et-interfaces">Abstraction et interfaces</a></li>
+    <li><a href="#classes-utiles">Classes utiles</a></li>
+    <li><a href="#gestion-mémoire">Gestion mémoire</a></li>
+    <li><a href="#bonnes-pratiques">Bonnes pratiques</a></li>
+    <li><a href="#exemple-">Exemple :</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/index.html"><span itemprop="name">Structures de donnée</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Révision</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/intro/index.html" title="Préalables (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/intro/exercices/index.html" title="Exercices (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable intro" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="révision">Révision</h1>
+
+<h1 id="rappel-">Rappel :</h1>
+<h2 id="concepts-de-base">Concepts de base</h2>
+<ul>
+<li>
+<p><strong>Classe</strong> : Modèle définissant les attributs (variables) et comportements (méthodes).</p>
+</li>
+<li>
+<p><strong>Objet</strong> : Instance concrète d’une classe.</p>
+</li>
+<li>
+<p><strong>Encapsulation</strong> : Protéger les données via des <strong>modificateurs d’accès</strong> (<code>private</code>, <code>public</code>, <code>protected</code>) et exposer des méthodes d’accès (getters/setters).</p>
+</li>
+<li>
+<p><strong>Abstraction</strong> : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).</p>
+</li>
+<li>
+<p><strong>Héritage</strong> : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé <code>extends</code>).</p>
+</li>
+<li>
+<p><strong>Polymorphisme</strong> :</p>
+<ul>
+<li><strong>Surcharge (overloading)</strong> : même nom de méthode, signatures différentes.</li>
+<li><strong>Redéfinition (overriding)</strong> : une sous-classe redéfinit le comportement d’une méthode héritée.</li>
+</ul>
+</li>
+<li>
+<p><strong>Constructeur</strong> : Méthode spéciale exécutée lors de la création d’un objet (<code>new</code>).</p>
+</li>
+</ul>
+<h2 id="modificateurs-daccès">Modificateurs d’accès</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Modificateur</th>
+          <th>Même classe</th>
+          <th>Même package</th>
+          <th>Sous-classe</th>
+          <th>Partout</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>public</code></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td><code>protected</code></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td><em>(default)</em></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td><code>private</code></td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="syntaxe-essentielle">Syntaxe essentielle</h2>
+<h3 id="définir-une-classe">Définir une classe</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Voiture</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String marque;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> annee;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Voiture</span>(String marque, <span style="color:#66d9ef">int</span> annee) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">marque</span> <span style="color:#f92672">=</span> marque;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">annee</span> <span style="color:#f92672">=</span> annee;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">demarrer</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(marque <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; démarre !&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="créer-un-objet">Créer un objet</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Voiture v1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Voiture(<span style="color:#e6db74">&#34;Toyota&#34;</span>, 2022);
+</span></span><span style="display:flex;"><span>v1.<span style="color:#a6e22e">demarrer</span>();</span></span></code></pre></div>
+<h2 id="héritage-et-polymorphisme">Héritage et polymorphisme</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parler</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;??&#34;</span>); }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Chien</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parler</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Woof&#34;</span>); }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Animal a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Chien(); <span style="color:#75715e">// polymorphisme</span>
+</span></span><span style="display:flex;"><span>a.<span style="color:#a6e22e">parler</span>(); <span style="color:#f92672">//</span> <span style="color:#e6db74">&#34;Woof&#34;</span></span></span></code></pre></div>
+<h2 id="abstraction-et-interfaces">Abstraction et interfaces</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Forme</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">aire</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cercle</span> <span style="color:#66d9ef">extends</span> Forme {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> r;
+</span></span><span style="display:flex;"><span>    Cercle(<span style="color:#66d9ef">double</span> r) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> r; }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">aire</span>() { <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> r <span style="color:#f92672">*</span> r; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Volant</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">voler</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Avion</span> <span style="color:#66d9ef">implements</span> Volant {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">voler</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;En vol ✈️&#34;</span>); }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="classes-utiles">Classes utiles</h2>
+<ul>
+<li>
+<p><strong><code>Object</code></strong> : classe racine de toutes les classes Java. Méthodes importantes :
+<code>toString()</code>, <code>equals()</code>, <code>hashCode()</code>, <code>clone()</code>.</p>
+</li>
+<li>
+<p><strong><code>final</code></strong> :</p>
+<ul>
+<li><code>final class</code> : non-héritée.</li>
+<li><code>final method</code> : non-redéfinissable.</li>
+<li><code>final variable</code> : constante.</li>
+</ul>
+</li>
+</ul>
+<h2 id="gestion-mémoire">Gestion mémoire</h2>
+<ul>
+<li>Les objets sont créés sur le <strong>tas (heap)</strong> via <code>new</code>.</li>
+<li>Le <strong>garbage collector</strong> libère automatiquement la mémoire des objets non référencés.</li>
+</ul>
+<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+<ul>
+<li>Utiliser <code>private</code> pour protéger les données.</li>
+<li>Toujours redéfinir <code>toString()</code> pour représenter un objet.</li>
+<li>Respecter la cohérence <code>equals()</code> / <code>hashCode()</code>.</li>
+<li>Favoriser la composition plutôt que l’héritage trop profond.</li>
+<li>Documenter avec <strong>JavaDoc</strong> (<code>/** … */</code>).</li>
+</ul>
+<h2 id="exemple-">Exemple :</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> s01;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Etudiant</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String nom;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Etudiant</span>(String nom, <span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">nom</span> <span style="color:#f92672">=</span> nom;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficherInfos</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nom : &#34;</span> <span style="color:#f92672">+</span> nom <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Âge : &#34;</span> <span style="color:#f92672">+</span> age);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EtudiantRegulier</span> <span style="color:#66d9ef">extends</span> Etudiant {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String programme;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">EtudiantRegulier</span>(String nom, <span style="color:#66d9ef">int</span> age, String programme) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(nom, age);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">programme</span> <span style="color:#f92672">=</span> programme;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficherInfos</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">afficherInfos</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Programme : &#34;</span> <span style="color:#f92672">+</span> programme);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RappelPOO</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        EtudiantRegulier e <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EtudiantRegulier(<span style="color:#e6db74">&#34;Alice&#34;</span>, 20, <span style="color:#e6db74">&#34;Informatique&#34;</span>);
+</span></span><span style="display:flex;"><span>        e.<span style="color:#a6e22e">afficherInfos</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-311/index.html" style="display:inline-flex; align-items:center;">
+    <img src="/420-311/images/logo.png" width="35%" alt="logo">
+    <span style="font-size: 140%; white-space:normal;">Structures de donnée</span>
+</a>
+        </div>
+        <search><form action="/420-311/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-311/index.html"><a class="padding" href="/420-311/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/420-311/intro/index.html"><a class="padding" href="/420-311/intro/index.html">1. Préalables</a><ul id="R-subsections-58f2a84c91d5deefe8bdd3a21213404a" class="collapsible-menu">
+            <li class="active " data-nav-id="/420-311/intro/revisionpoo/index.html"><a class="padding" href="/420-311/intro/revisionpoo/index.html">Révision</a></li>
+            <li class="" data-nav-id="/420-311/intro/exercices/index.html"><a class="padding" href="/420-311/intro/exercices/index.html">Exercices</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer">          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <div class="logo-title">Sara Boumehraz</div>
+            <br/>
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+          </a>
+          <br>Creative Commons BY-NC-SA</br></div>
+      </div>
+    </aside>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1755783655" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1755783655" defer></script>
+    <script src="/420-311/js/theme.js?1755783655" defer></script>
+  </body>
+</html>

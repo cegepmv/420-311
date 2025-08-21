@@ -1,0 +1,21 @@
+baseURL = 'https://cegepmv.github.io/420-311/'
+languageCode = 'fr-ca'
+title = 'Structures de donnée'
+theme = 'hugo-theme-relearn'
+[params]
+  # Change default color scheme with a variant one. Can be empty, "red", "blue", "green".
+  themeVariant = "blue"
+  disableLandingPageButton = false
+  alwaysopen = false
+  # Set this to true to disable copy-to-clipboard button for inline code.
+  disableInlineCopyToClipBoard = true
+  # Désactiver search bar
+  # disableSearch = false
+  # Hide breadcrumbs in the header and only show the current page title
+  disableBreadcrumb = false
+  # If set to true, hide table of contents menu in the header of all pages
+  disableToc = false
+  # Hide Next and Previous page buttons normally displayed full height beside content
+  disableNextPrev = false
+#comment
+

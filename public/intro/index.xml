@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Préalables :: Structures de donnée</title>
+    <link>http://localhost:1313/420-311/intro/index.html</link>
+    <description>Dans ce module nous ferons une courte révision des notions essentielles au cours.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="http://localhost:1313/420-311/intro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Révision</title>
+      <link>http://localhost:1313/420-311/intro/revisionpoo/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/intro/revisionpoo/index.html</guid>
+      <description>Rappel : Concepts de base Classe : Modèle définissant les attributs (variables) et comportements (méthodes).&#xA;Objet : Instance concrète d’une classe.&#xA;Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).&#xA;Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).&#xA;Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).</description>
+    </item>
+    <item>
+      <title>Exercices</title>
+      <link>http://localhost:1313/420-311/intro/exercices/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/intro/exercices/index.html</guid>
+      <description>Exercices théoriques Exercice 1 : Quel est le résultat du code suivant:&#xA;public class Question1 { public static int methode1() { int i = 0; i++; return i; } public static void main(String[] args) { methode1(); int j = 12; j = methode1(); System.out.println(j); } }&#xD;Exercice 2 : Quel est le résultat du code suivant:&#xA;public class Question2 { public static void main (String[] args) { try { int i, sum; sum = 10; for (i = -1; i &lt; 3 ;++i) { sum = (sum / i); System.out.println(i); } } catch(Exception e) { System.out.print(&#34;Erreur!&#34;); }&#x9;} }&#xD;Exercice 3 : Quel est le résultat du code suivant:</description>
+    </item>
+  </channel>
+</rss>
