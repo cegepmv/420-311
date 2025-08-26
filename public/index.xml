@@ -2,16 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Structures de donnée</title>
-    <link>http://localhost:1313/420-311/index.html</link>
+    <link>http://localhost:1515/420-311/index.html</link>
     <description>Objectifs généraux du cours Ce cours vous permettra de :&#xA;Concevoir et programmer des applications en Java en utilisant les principales structures de données.&#xA;Évaluer et comparer la complexité algorithmique des opérations (temps et mémoire).&#xA;Utiliser des fils d’exécution (threads) pour exécuter plusieurs tâches en parallèle.&#xA;Développer un esprit critique pour choisir la bonne structure et le bon paradigme selon le contexte.&#xA;Pourquoi étudier les structures de données ? Parce qu’elles sont au cœur de la programmation : tout logiciel, du plus simple au plus complexe, repose sur des structures de données.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/420-311/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Aug 2025 08:21:07 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1515/420-311/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
-      <link>http://localhost:1313/420-311/intro/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-311/intro/index.html</guid>
+      <link>http://localhost:1515/420-311/intro/index.html</link>
+      <pubDate>Tue, 26 Aug 2025 08:21:07 -0400</pubDate>
+      <guid>http://localhost:1515/420-311/intro/index.html</guid>
       <description>Dans ce module nous ferons une courte révision des notions essentielles au cours.</description>
     </item>
   </channel>

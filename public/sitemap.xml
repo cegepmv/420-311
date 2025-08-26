@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/420-311/intro/index.html</loc>
+    <loc>http://localhost:1515/420-311/intro/index.html</loc>
+    <lastmod>2025-08-26T08:21:07-04:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/intro/revisionpoo/index.html</loc>
+    <loc>http://localhost:1515/420-311/intro/revisionpoo/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/intro/exercices/index.html</loc>
+    <loc>http://localhost:1515/420-311/intro/exercices/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/ressourcesutiles/gestioncodesource/index.html</loc>
+    <loc>http://localhost:1515/420-311/intro/quiz/index.html</loc>
+    <lastmod>2025-08-26T08:21:07-04:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/categories/index.html</loc>
+    <loc>http://localhost:1515/420-311/ressourcesutiles/gestioncodesource/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/index.html</loc>
+    <loc>http://localhost:1515/420-311/index.html</loc>
+    <lastmod>2025-08-26T08:21:07-04:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/tags/index.html</loc>
+    <loc>http://localhost:1515/420-311/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1515/420-311/tags/index.html</loc>
   </url>
 </urlset>

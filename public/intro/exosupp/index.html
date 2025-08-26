@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1515&amp;path=420-311/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Exercice 21 : Quel est le résultat du code suivant:
+Exercice 22 : Question Vrai/Faux OUI ✔ NON ❌ NSP ❗ 1- Est-ce que je peux instancier une Interface? ❄️ 2- Est-ce qu’une interface est un objet? ⛄ 3- Est-ce qu’une interface hérite de la classe Object? ⚡ 4- Est-ce qu’une interface peut hériter d’une autre interface? ☁️ 5- Est-ce qu’une interface peut hériter d’une classe? ☔ 6- Est-ce qu’une classe peut-être « private »? 🌊 7- Est-ce que chaque classe Java possède la méthode « toString() »? ❄️ 8- Est-ce que le constructeur d’une classe peut être « private »? ⛄ 9- Est-ce que chaque classe Java possède un constructeur ⚡ 10- Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️ 11- Est-ce qu’une interface peut hériter d’une autre interface? ☔ 12- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊 13- Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️ 14- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄ 15- Est-ce qu’une interface peut être instanciée? ⚡ ✅ Quiz sur les méthodes et interfaces en Java # Questions OUI ✔ NON ❌ NSP ❗ 1 Est-ce qu’une méthode abstraite peut être appelée à partir d’une méthode non abstraite ? ☐ ☐ ☐ 2 Est-ce que chaque méthode dans une classe doit avoir un nom unique ? ☐ ☐ ☐ 3 Est-ce qu’une méthode déclarée « final static » peut être redéfinie dans une classe enfant ? ☐ ☐ ☐ 4 Est-ce qu’une déclaration de méthode doit toujours avoir une visibilité ? ☐ ☐ ☐ 5 Est-ce que toutes les méthodes d’une interface doivent être obligatoirement « public » ? ☐ ☐ ☐ 6 static public void main(String argsss[]) : est-ce que cette méthode « main » est correcte ? ☐ ☐ ☐ 7 Est-ce que l’on peut utiliser « abstract » et « final » dans la même signature de méthode ? ☐ ☐ ☐ 8 Est-ce que je peux déclarer une méthode « protected » dans une interface ? ☐ ☐ ☐ 9 Est-ce que « null » est un mot clé Java ? ☐ ☐ ☐ 10 Est-ce qu’une interface peut hériter d’une autre interface ? ☐ ☐ ☐ THÉORIQUE 18 Quelle est la différence entre une classe « public » et une classe « abstract »? THÉORIQUE 19 Quelle est la différence entre l’interface « Comparable » et l’interface « Comparator »? THÉORIQUE 20 Quelle est la différence entre une classe « final », une méthode « final » et un attribut « final »? THÉORIQUE 21 Quel est le point commun entre une classe « abstract » et une classe « public » ayant des constructeurs « private »?">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ExoSupp :: Structures de donnée">
+    <meta name="twitter:description" content="Exercice 21 : Quel est le résultat du code suivant:
+Exercice 22 : Question Vrai/Faux OUI ✔ NON ❌ NSP ❗ 1- Est-ce que je peux instancier une Interface? ❄️ 2- Est-ce qu’une interface est un objet? ⛄ 3- Est-ce qu’une interface hérite de la classe Object? ⚡ 4- Est-ce qu’une interface peut hériter d’une autre interface? ☁️ 5- Est-ce qu’une interface peut hériter d’une classe? ☔ 6- Est-ce qu’une classe peut-être « private »? 🌊 7- Est-ce que chaque classe Java possède la méthode « toString() »? ❄️ 8- Est-ce que le constructeur d’une classe peut être « private »? ⛄ 9- Est-ce que chaque classe Java possède un constructeur ⚡ 10- Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️ 11- Est-ce qu’une interface peut hériter d’une autre interface? ☔ 12- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊 13- Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️ 14- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄ 15- Est-ce qu’une interface peut être instanciée? ⚡ ✅ Quiz sur les méthodes et interfaces en Java # Questions OUI ✔ NON ❌ NSP ❗ 1 Est-ce qu’une méthode abstraite peut être appelée à partir d’une méthode non abstraite ? ☐ ☐ ☐ 2 Est-ce que chaque méthode dans une classe doit avoir un nom unique ? ☐ ☐ ☐ 3 Est-ce qu’une méthode déclarée « final static » peut être redéfinie dans une classe enfant ? ☐ ☐ ☐ 4 Est-ce qu’une déclaration de méthode doit toujours avoir une visibilité ? ☐ ☐ ☐ 5 Est-ce que toutes les méthodes d’une interface doivent être obligatoirement « public » ? ☐ ☐ ☐ 6 static public void main(String argsss[]) : est-ce que cette méthode « main » est correcte ? ☐ ☐ ☐ 7 Est-ce que l’on peut utiliser « abstract » et « final » dans la même signature de méthode ? ☐ ☐ ☐ 8 Est-ce que je peux déclarer une méthode « protected » dans une interface ? ☐ ☐ ☐ 9 Est-ce que « null » est un mot clé Java ? ☐ ☐ ☐ 10 Est-ce qu’une interface peut hériter d’une autre interface ? ☐ ☐ ☐ THÉORIQUE 18 Quelle est la différence entre une classe « public » et une classe « abstract »? THÉORIQUE 19 Quelle est la différence entre l’interface « Comparable » et l’interface « Comparator »? THÉORIQUE 20 Quelle est la différence entre une classe « final », une méthode « final » et un attribut « final »? THÉORIQUE 21 Quel est le point commun entre une classe « abstract » et une classe « public » ayant des constructeurs « private »?">
+    <meta property="og:url" content="http://localhost:1515/420-311/intro/exosupp/index.html">
+    <meta property="og:site_name" content="Structures de donnée">
+    <meta property="og:title" content="ExoSupp :: Structures de donnée">
+    <meta property="og:description" content="Exercice 21 : Quel est le résultat du code suivant:
+Exercice 22 : Question Vrai/Faux OUI ✔ NON ❌ NSP ❗ 1- Est-ce que je peux instancier une Interface? ❄️ 2- Est-ce qu’une interface est un objet? ⛄ 3- Est-ce qu’une interface hérite de la classe Object? ⚡ 4- Est-ce qu’une interface peut hériter d’une autre interface? ☁️ 5- Est-ce qu’une interface peut hériter d’une classe? ☔ 6- Est-ce qu’une classe peut-être « private »? 🌊 7- Est-ce que chaque classe Java possède la méthode « toString() »? ❄️ 8- Est-ce que le constructeur d’une classe peut être « private »? ⛄ 9- Est-ce que chaque classe Java possède un constructeur ⚡ 10- Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️ 11- Est-ce qu’une interface peut hériter d’une autre interface? ☔ 12- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊 13- Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️ 14- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄ 15- Est-ce qu’une interface peut être instanciée? ⚡ ✅ Quiz sur les méthodes et interfaces en Java # Questions OUI ✔ NON ❌ NSP ❗ 1 Est-ce qu’une méthode abstraite peut être appelée à partir d’une méthode non abstraite ? ☐ ☐ ☐ 2 Est-ce que chaque méthode dans une classe doit avoir un nom unique ? ☐ ☐ ☐ 3 Est-ce qu’une méthode déclarée « final static » peut être redéfinie dans une classe enfant ? ☐ ☐ ☐ 4 Est-ce qu’une déclaration de méthode doit toujours avoir une visibilité ? ☐ ☐ ☐ 5 Est-ce que toutes les méthodes d’une interface doivent être obligatoirement « public » ? ☐ ☐ ☐ 6 static public void main(String argsss[]) : est-ce que cette méthode « main » est correcte ? ☐ ☐ ☐ 7 Est-ce que l’on peut utiliser « abstract » et « final » dans la même signature de méthode ? ☐ ☐ ☐ 8 Est-ce que je peux déclarer une méthode « protected » dans une interface ? ☐ ☐ ☐ 9 Est-ce que « null » est un mot clé Java ? ☐ ☐ ☐ 10 Est-ce qu’une interface peut hériter d’une autre interface ? ☐ ☐ ☐ THÉORIQUE 18 Quelle est la différence entre une classe « public » et une classe « abstract »? THÉORIQUE 19 Quelle est la différence entre l’interface « Comparable » et l’interface « Comparator »? THÉORIQUE 20 Quelle est la différence entre une classe « final », une méthode « final » et un attribut « final »? THÉORIQUE 21 Quel est le point commun entre une classe « abstract » et une classe « public » ayant des constructeurs « private »?">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Préalables">
+    <meta itemprop="name" content="ExoSupp :: Structures de donnée">
+    <meta itemprop="description" content="Exercice 21 : Quel est le résultat du code suivant:
+Exercice 22 : Question Vrai/Faux OUI ✔ NON ❌ NSP ❗ 1- Est-ce que je peux instancier une Interface? ❄️ 2- Est-ce qu’une interface est un objet? ⛄ 3- Est-ce qu’une interface hérite de la classe Object? ⚡ 4- Est-ce qu’une interface peut hériter d’une autre interface? ☁️ 5- Est-ce qu’une interface peut hériter d’une classe? ☔ 6- Est-ce qu’une classe peut-être « private »? 🌊 7- Est-ce que chaque classe Java possède la méthode « toString() »? ❄️ 8- Est-ce que le constructeur d’une classe peut être « private »? ⛄ 9- Est-ce que chaque classe Java possède un constructeur ⚡ 10- Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️ 11- Est-ce qu’une interface peut hériter d’une autre interface? ☔ 12- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊 13- Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️ 14- Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄ 15- Est-ce qu’une interface peut être instanciée? ⚡ ✅ Quiz sur les méthodes et interfaces en Java # Questions OUI ✔ NON ❌ NSP ❗ 1 Est-ce qu’une méthode abstraite peut être appelée à partir d’une méthode non abstraite ? ☐ ☐ ☐ 2 Est-ce que chaque méthode dans une classe doit avoir un nom unique ? ☐ ☐ ☐ 3 Est-ce qu’une méthode déclarée « final static » peut être redéfinie dans une classe enfant ? ☐ ☐ ☐ 4 Est-ce qu’une déclaration de méthode doit toujours avoir une visibilité ? ☐ ☐ ☐ 5 Est-ce que toutes les méthodes d’une interface doivent être obligatoirement « public » ? ☐ ☐ ☐ 6 static public void main(String argsss[]) : est-ce que cette méthode « main » est correcte ? ☐ ☐ ☐ 7 Est-ce que l’on peut utiliser « abstract » et « final » dans la même signature de méthode ? ☐ ☐ ☐ 8 Est-ce que je peux déclarer une méthode « protected » dans une interface ? ☐ ☐ ☐ 9 Est-ce que « null » est un mot clé Java ? ☐ ☐ ☐ 10 Est-ce qu’une interface peut hériter d’une autre interface ? ☐ ☐ ☐ THÉORIQUE 18 Quelle est la différence entre une classe « public » et une classe « abstract »? THÉORIQUE 19 Quelle est la différence entre l’interface « Comparable » et l’interface « Comparator »? THÉORIQUE 20 Quelle est la différence entre une classe « final », une méthode « final » et un attribut « final »? THÉORIQUE 21 Quel est le point commun entre une classe « abstract » et une classe « public » ayant des constructeurs « private »?">
+    <meta itemprop="wordCount" content="465">
+    <title>ExoSupp :: Structures de donnée</title><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1756215951" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1756215951" defer></script>
+    <script src="/420-311/js/search-lunr.js?1756215951" defer></script>
+    <script src="/420-311/js/search.js?1756215951" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1756215951";
+    </script>
+    <script src="/420-311/js/lunr/lunr.min.js?1756215951" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1756215951" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1756215951" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1756215951" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756215951" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756215951" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1756215951" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1756215951" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1756215951" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/intro\/exosupp\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1515\/420-311';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/420-311/intro/exosupp/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#exercice-21-">Exercice 21 :</a></li>
+        <li><a href="#exercice-22-">Exercice 22 :</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/index.html"><span itemprop="name">Structures de donnée</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">ExoSupp</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/intro/quiz/index.html" title="Quiz (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable intro" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="exosupp">ExoSupp</h1>
+
+<h3 id="exercice-21-">Exercice 21 :</h3>
+<p>Quel est le résultat du code suivant:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"></code></pre></div>
+<hr>
+<h3 id="exercice-22-">Exercice 22 :</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Question Vrai/Faux</th>
+          <th style="text-align: center">OUI ✔</th>
+          <th style="text-align: center">NON ❌</th>
+          <th style="text-align: center">NSP ❗</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1-  Est-ce que je peux instancier une Interface? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2-  Est-ce qu&rsquo;une interface est un objet? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3-  Est-ce qu’une interface hérite de la classe Object? ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4-  Est-ce qu’une interface peut hériter d&rsquo;une autre interface? ☁️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5-  Est-ce qu’une interface peut hériter d&rsquo;une classe? ☔</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6-  Est-ce qu&rsquo;une classe peut-être « private »? 🌊</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7-  Est-ce que chaque classe Java possède la méthode « toString() »? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8-  Est-ce que le constructeur d’une classe peut être « private »? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9-  Est-ce que chaque classe Java possède un constructeur ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10-  Dans une classe Java, est-ce que 02 méthodes peuvent avoir le même nom? ☁️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">11-  Est-ce qu’une interface peut hériter d&rsquo;une autre interface? ☔</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">12-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">13-  Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">14-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">15-  Est-ce qu’une interface peut être instanciée? ⚡</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="-quiz-sur-les-méthodes-et-interfaces-en-java">✅ Quiz sur les méthodes et interfaces en Java</h1>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Questions</th>
+          <th>OUI ✔</th>
+          <th>NON ❌</th>
+          <th>NSP ❗</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Est-ce qu’une méthode abstraite peut être appelée à partir d&rsquo;une méthode non abstraite ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Est-ce que chaque méthode dans une classe doit avoir un nom unique ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Est-ce qu’une méthode déclarée « final static » peut être redéfinie dans une classe enfant ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Est-ce qu’une déclaration de méthode doit toujours avoir une visibilité ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Est-ce que toutes les méthodes d’une interface doivent être obligatoirement « public » ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><code>static public void main(String argsss[])</code> : est-ce que cette méthode « main » est correcte ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>Est-ce que l’on peut utiliser « abstract » et « final » dans la même signature de méthode ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Est-ce que je peux déclarer une méthode « protected » dans une interface ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>Est-ce que « null » est un mot clé Java ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>Est-ce qu’une interface peut hériter d’une autre interface ?</td>
+          <td>☐</td>
+          <td>☐</td>
+          <td>☐</td>
+      </tr>
+  </tbody>
+</table>
+<p>THÉORIQUE 18
+Quelle est la différence entre une classe « public » et une classe « abstract »?
+THÉORIQUE 19
+Quelle est la différence entre l’interface « Comparable » et l’interface « Comparator »?
+THÉORIQUE 20
+Quelle est la différence entre une classe « final », une méthode « final » et un attribut « final »?
+THÉORIQUE 21
+Quel est le point commun entre une classe « abstract » et une classe « public » ayant des constructeurs « private »?</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-311/index.html" style="display:inline-flex; align-items:center;">
+    <img src="/420-311/images/logo.png" width="35%" alt="logo">
+    <span style="font-size: 140%; white-space:normal;">Structures de donnée</span>
+</a>
+        </div>
+        <search><form action="/420-311/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-311/index.html"><a class="padding" href="/420-311/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/420-311/intro/index.html"><a class="padding" href="/420-311/intro/index.html">1. Préalables</a><ul id="R-subsections-58f2a84c91d5deefe8bdd3a21213404a" class="collapsible-menu">
+            <li class="" data-nav-id="/420-311/intro/revisionpoo/index.html"><a class="padding" href="/420-311/intro/revisionpoo/index.html">Révision</a></li>
+            <li class="" data-nav-id="/420-311/intro/exercices/index.html"><a class="padding" href="/420-311/intro/exercices/index.html">Questions et exercices</a></li>
+            <li class="" data-nav-id="/420-311/intro/quiz/index.html"><a class="padding" href="/420-311/intro/quiz/index.html">Quiz</a></li>
+            <li class="active " data-nav-id="/420-311/intro/exosupp/index.html"><a class="padding" href="/420-311/intro/exosupp/index.html">ExoSupp</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer">          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <div class="logo-title">Sara Boumehraz</div>
+            <br/>
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+          </a>
+          <br>Creative Commons BY-NC-SA</br></div>
+      </div>
+    </aside>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1756215951" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1756215951" defer></script>
+    <script src="/420-311/js/theme.js?1756215951" defer></script>
+  </body>
+</html>
