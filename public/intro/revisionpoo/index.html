@@ -35,28 +35,28 @@ Objet : Instance concrète d’une classe.
 Encapsulation : Protéger les données via des modificateurs d’accès (private, public, protected) et exposer des méthodes d’accès (getters/setters).
 Abstraction : Masquer les détails d’implémentation et ne montrer que les fonctionnalités essentielles (via classes abstraites et interfaces).
 Héritage : Une classe peut hériter des attributs et méthodes d’une autre (mot-clé extends).">
-    <meta itemprop="wordCount" content="466">
+    <meta itemprop="wordCount" content="864">
     <title>Révision :: Structures de donnée</title><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
-    <link href="/420-311/css/auto-complete/auto-complete.min.css?1756216465" rel="stylesheet">
-    <script src="/420-311/js/auto-complete/auto-complete.min.js?1756216465" defer></script>
-    <script src="/420-311/js/search-lunr.js?1756216465" defer></script>
-    <script src="/420-311/js/search.js?1756216465" defer></script>
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1756399482" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1756399482" defer></script>
+    <script src="/420-311/js/search-lunr.js?1756399482" defer></script>
+    <script src="/420-311/js/search.js?1756399482" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/420-311/searchindex.en.js?1756216465";
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1756399482";
     </script>
-    <script src="/420-311/js/lunr/lunr.min.js?1756216465" defer></script>
-    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1756216465" defer></script>
-    <script src="/420-311/js/lunr/lunr.multi.min.js?1756216465" defer></script>
-    <script src="/420-311/js/lunr/lunr.fr.min.js?1756216465" defer></script>
+    <script src="/420-311/js/lunr/lunr.min.js?1756399482" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1756399482" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1756399482" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1756399482" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['fr'];
     </script>
-    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756216465" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756216465" rel="stylesheet"></noscript>
-    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1756216465" rel="stylesheet">
-    <link href="/420-311/css/theme.css?1756216465" rel="stylesheet">
-    <link href="/420-311/css/format-html.css?1756216465" rel="stylesheet" id="R-format-style">
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756399482" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1756399482" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1756399482" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1756399482" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1756399482" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -139,6 +139,17 @@ Héritage : Une classe peut hériter des attributs et méthodes d’une autre (m
     <li><a href="#gestion-mémoire">Gestion mémoire</a></li>
     <li><a href="#bonnes-pratiques">Bonnes pratiques</a></li>
     <li><a href="#exemple-">Exemple :</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-1-classes">🔹 1. Classes</a></li>
+    <li><a href="#-2-constructeurs">🔹 2. Constructeurs</a></li>
+    <li><a href="#-3-méthodes">🔹 3. Méthodes</a></li>
+    <li><a href="#-4-attributs">🔹 4. Attributs</a></li>
+    <li><a href="#-5-interfaces">🔹 5. Interfaces</a></li>
+    <li><a href="#-6-comparable-vs-comparator">🔹 6. Comparable vs Comparator</a></li>
+    <li><a href="#-7-mots-clés-spéciaux">🔹 7. Mots-clés spéciaux</a></li>
+    <li><a href="#résumé">Résumé</a></li>
   </ul>
 </nav>
                 </div>
@@ -357,6 +368,122 @@ Héritage : Une classe peut hériter des attributs et méthodes d’une autre (m
 </span></span><span style="display:flex;"><span>        e.<span style="color:#a6e22e">afficherInfos</span>();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<hr>
+<h1 id="-résumé-de-révision--poo">📘 Résumé de révision – POO</h1>
+<h2 id="-1-classes">🔹 1. Classes</h2>
+<ul>
+<li>Une <strong>classe <code>public</code></strong> est accessible depuis n’importe quel package.</li>
+<li>Une <strong>classe <code>abstract</code></strong> sert de modèle, ne peut pas être instanciée et peut contenir des méthodes abstraites.</li>
+<li>Une <strong>classe <code>final</code></strong> ne peut pas être héritée.</li>
+<li>Une <strong>classe <code>private</code></strong> n’est possible qu’en <strong>classe interne</strong> (nested class).</li>
+<li>Toute classe hérite implicitement de <code>Object</code> → possède donc les méthodes <code>toString()</code>, <code>equals()</code>, <code>hashCode()</code>, etc.</li>
+</ul>
+<h2 id="-2-constructeurs">🔹 2. Constructeurs</h2>
+<ul>
+<li>Si aucune déclaration → le compilateur génère un <strong>constructeur par défaut</strong> (sans paramètres).</li>
+<li>Un <strong>constructeur peut être <code>private</code></strong> (utilisé dans le pattern Singleton ou classes utilitaires).</li>
+</ul>
+<h2 id="-3-méthodes">🔹 3. Méthodes</h2>
+<ul>
+<li>Les méthodes peuvent être <strong>surchargées (overloading)</strong> → même nom, paramètres différents.</li>
+<li>Les méthodes peuvent être <strong>surdéfinies (overriding)</strong> → même signature, dans une sous-classe.</li>
+<li>Une méthode <strong><code>final</code></strong> ne peut pas être redéfinie dans une sous-classe.</li>
+<li>Une méthode <strong><code>abstract</code></strong> est déclarée sans corps et doit être implémentée dans une sous-classe.</li>
+<li><code>abstract</code> et <code>final</code> sont <strong>incompatibles</strong> (contradiction).</li>
+</ul>
+<h2 id="-4-attributs">🔹 4. Attributs</h2>
+<ul>
+<li>Un attribut <strong><code>final</code></strong> est une <strong>constante</strong> : doit être initialisé une seule fois (déclaration ou constructeur).</li>
+</ul>
+<h2 id="-5-interfaces">🔹 5. Interfaces</h2>
+<ul>
+<li>
+<p>Une <strong>interface</strong> ne peut pas être instanciée.</p>
+</li>
+<li>
+<p>Une interface n’est pas un objet, c’est un <strong>contrat</strong>.</p>
+</li>
+<li>
+<p>Une interface <strong>n’hérite pas d’<code>Object</code></strong>, mais les classes qui l’implémentent héritent d’<code>Object</code>.</p>
+</li>
+<li>
+<p>Une interface peut <strong>hériter d’une ou plusieurs autres interfaces</strong> avec <code>extends</code>.</p>
+</li>
+<li>
+<p>Une interface ne peut pas hériter d’une <strong>classe</strong>.</p>
+</li>
+<li>
+<p>Méthodes dans une interface :</p>
+<ul>
+<li>Avant Java 8 → uniquement <code>public abstract</code>.</li>
+<li>Depuis Java 8 → méthodes <code>default</code> et <code>static</code> avec implémentation.</li>
+<li>Depuis Java 9 → méthodes <code>private</code> pour factoriser du code interne.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-6-comparable-vs-comparator">🔹 6. Comparable vs Comparator</h2>
+<ul>
+<li><strong>Comparable</strong> : définit l’ordre naturel d’une classe (méthode <code>compareTo</code>).</li>
+<li><strong>Comparator</strong> : définit un ordre externe, peut être multiple et personnalisé (méthode <code>compare</code>).</li>
+</ul>
+<h2 id="-7-mots-clés-spéciaux">🔹 7. Mots-clés spéciaux</h2>
+<ul>
+<li><code>null</code> → <strong>valeur littérale spéciale</strong>, pas un mot-clé.</li>
+<li><code>this</code> → référence à l’instance courante.</li>
+<li><code>super</code> → référence à la classe parente.</li>
+</ul>
+<h2 id="résumé">Résumé</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Élément</th>
+          <th>Description</th>
+          <th>Exemple</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Classe <code>abstract</code></td>
+          <td>Non instanciable, modèle pour héritage</td>
+          <td><code>abstract class Forme { abstract double aire(); }</code></td>
+      </tr>
+      <tr>
+          <td>Classe <code>final</code></td>
+          <td>Ne peut pas être héritée</td>
+          <td><code>final class Utilitaire {}</code></td>
+      </tr>
+      <tr>
+          <td>Méthode <code>final</code></td>
+          <td>Ne peut pas être redéfinie</td>
+          <td><code>public final void calcul() {}</code></td>
+      </tr>
+      <tr>
+          <td>Méthode <code>abstract</code></td>
+          <td>Sans corps, à implémenter</td>
+          <td><code>abstract void afficher();</code></td>
+      </tr>
+      <tr>
+          <td>Attribut <code>final</code></td>
+          <td>Constante, valeur fixée une seule fois</td>
+          <td><code>final double PI = 3.14;</code></td>
+      </tr>
+      <tr>
+          <td>Interface</td>
+          <td>Contrat, non instanciable</td>
+          <td><code>interface Vehicule { void rouler(); }</code></td>
+      </tr>
+      <tr>
+          <td>Comparable</td>
+          <td>Ordre naturel, <code>compareTo</code></td>
+          <td><code>class Etudiant implements Comparable&lt;Etudiant&gt;</code></td>
+      </tr>
+      <tr>
+          <td>Comparator</td>
+          <td>Ordre externe, <code>compare</code></td>
+          <td><code>Comparator&lt;Etudiant&gt; parNom = ...;</code></td>
+      </tr>
+  </tbody>
+</table>
 
   <footer class="footline">
   </footer>
@@ -431,8 +558,8 @@ Héritage : Une classe peut hériter des attributs et méthodes d’une autre (m
           <br>Creative Commons BY-NC-SA</br></div>
       </div>
     </aside>
-    <script src="/420-311/js/clipboard/clipboard.min.js?1756216465" defer></script>
-    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1756216465" defer></script>
-    <script src="/420-311/js/theme.js?1756216465" defer></script>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1756399482" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1756399482" defer></script>
+    <script src="/420-311/js/theme.js?1756399482" defer></script>
   </body>
 </html>

@@ -113,6 +113,25 @@ Réponse :
 
 ```
 
+## Quiz 1 : corrigé
+| Question Vrai/Faux | OUI ✔ | NON ❌ | NSP ❗ | Explication |
+|:---|:---:|:---:|:---:|:---|
+|1-  Est-ce que je peux instancier une Interface? ❄️|   | ✔ |   | Une interface ne peut pas être instanciée directement, seulement implémentée par une classe. |
+|2-  Est-ce qu'une interface est un objet? ⛄|   | ✔ |   | Une interface est un type, pas un objet ; seules les classes créent des objets. |
+|3-  Est-ce qu’une interface hérite de la classe Object? ⚡|   | ✔ |   | Une interface ne dérive pas d’`Object`, mais toute classe qui l’implémente hérite d’`Object`. |
+|4-  Est-ce qu’une interface peut hériter d'une autre interface? ☁️ | ✔ |   |   | Oui, une interface peut étendre une ou plusieurs interfaces avec `extends`. |
+|5-  Est-ce qu’une interface peut hériter d'une classe? ☔|   | ✔ |   | Non, une interface ne peut hériter que d’autres interfaces, pas de classes. |
+|6-  Est-ce qu'une classe peut-être « private »? 🌊|   | ✔ |   | Une classe ne peut pas être `private` au niveau top-level, seulement à l’intérieur d’une autre classe (classe interne). |
+|7-  Est-ce que chaque classe Java possède la méthode « toString() »? ❄️| ✔ |   |   | Oui, car toutes les classes héritent implicitement de `Object` qui définit `toString()`. |
+|8-  Est-ce que le constructeur d’une classe peut être « private »? ⛄| ✔ |   |   | Oui, utile pour restreindre l’instanciation (ex. classes utilitaires ou pattern Singleton). |
+|9-  Est-ce que chaque classe Java possède un constructeur ⚡| ✔ |   |   | Oui, si aucun n’est défini, le compilateur fournit un constructeur par défaut. |
+|10-  Dans une classe Java, est-ce que 2 méthodes peuvent avoir le même nom? ☁️| ✔ |   |   | Oui, grâce à la **surcharge** (méthodes avec paramètres différents). |
+|11-  Est-ce qu’une interface peut hériter d'une autre interface? ☔ | ✔ |   |   | Oui, c’est un des principes d’extension d’interfaces en Java. |
+|12-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? 🌊 | ✔ |   |   | Depuis Java 9, les interfaces peuvent avoir des méthodes `private` pour factoriser du code interne. |
+|13-  Est-ce qu’une interface peut avoir des méthodes « public» avec du code? ❄️ | ✔ |   |   | Oui, depuis Java 8, les interfaces peuvent avoir des méthodes `default` ou `static` avec implémentation. |
+|14-  Est-ce qu’une interface peut avoir des méthodes « private » avec du code? ⛄ | ✔ |   |   | Oui, confirmé : à partir de Java 9, les `private` methods dans une interface sont autorisées. |
+|15-  Est-ce qu’une interface peut être instanciée? ⚡ |   | ✔ |   | Non, une interface ne peut pas être instanciée directement (mais peut être utilisée via une classe anonyme). |
+
 ---
 ## Quiz 2 : corrigé
 

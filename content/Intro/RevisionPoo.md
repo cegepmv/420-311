@@ -160,3 +160,82 @@ public class RappelPOO {
 
 ```
 
+---
+
+# 📘 Résumé de révision – POO
+
+## 🔹 1. Classes
+
+* Une **classe `public`** est accessible depuis n’importe quel package.
+* Une **classe `abstract`** sert de modèle, ne peut pas être instanciée et peut contenir des méthodes abstraites.
+* Une **classe `final`** ne peut pas être héritée.
+* Une **classe `private`** n’est possible qu’en **classe interne** (nested class).
+* Toute classe hérite implicitement de `Object` → possède donc les méthodes `toString()`, `equals()`, `hashCode()`, etc.
+
+
+## 🔹 2. Constructeurs
+
+* Si aucune déclaration → le compilateur génère un **constructeur par défaut** (sans paramètres).
+* Un **constructeur peut être `private`** (utilisé dans le pattern Singleton ou classes utilitaires).
+
+
+## 🔹 3. Méthodes
+
+* Les méthodes peuvent être **surchargées (overloading)** → même nom, paramètres différents.
+* Les méthodes peuvent être **surdéfinies (overriding)** → même signature, dans une sous-classe.
+* Une méthode **`final`** ne peut pas être redéfinie dans une sous-classe.
+* Une méthode **`abstract`** est déclarée sans corps et doit être implémentée dans une sous-classe.
+* `abstract` et `final` sont **incompatibles** (contradiction).
+
+
+## 🔹 4. Attributs
+
+* Un attribut **`final`** est une **constante** : doit être initialisé une seule fois (déclaration ou constructeur).
+
+
+
+## 🔹 5. Interfaces
+
+* Une **interface** ne peut pas être instanciée.
+* Une interface n’est pas un objet, c’est un **contrat**.
+* Une interface **n’hérite pas d’`Object`**, mais les classes qui l’implémentent héritent d’`Object`.
+* Une interface peut **hériter d’une ou plusieurs autres interfaces** avec `extends`.
+* Une interface ne peut pas hériter d’une **classe**.
+* Méthodes dans une interface :
+
+  * Avant Java 8 → uniquement `public abstract`.
+  * Depuis Java 8 → méthodes `default` et `static` avec implémentation.
+  * Depuis Java 9 → méthodes `private` pour factoriser du code interne.
+
+
+
+## 🔹 6. Comparable vs Comparator
+
+* **Comparable** : définit l’ordre naturel d’une classe (méthode `compareTo`).
+* **Comparator** : définit un ordre externe, peut être multiple et personnalisé (méthode `compare`).
+
+
+
+## 🔹 7. Mots-clés spéciaux
+
+* `null` → **valeur littérale spéciale**, pas un mot-clé.
+* `this` → référence à l’instance courante.
+* `super` → référence à la classe parente.
+
+
+
+## Résumé
+
+| Élément            | Description                            | Exemple                                            |
+| ------------------ | -------------------------------------- | -------------------------------------------------- |
+| Classe `abstract`  | Non instanciable, modèle pour héritage | `abstract class Forme { abstract double aire(); }` |
+| Classe `final`     | Ne peut pas être héritée               | `final class Utilitaire {}`                        |
+| Méthode `final`    | Ne peut pas être redéfinie             | `public final void calcul() {}`                    |
+| Méthode `abstract` | Sans corps, à implémenter              | `abstract void afficher();`                        |
+| Attribut `final`   | Constante, valeur fixée une seule fois | `final double PI = 3.14;`                          |
+| Interface          | Contrat, non instanciable              | `interface Vehicule { void rouler(); }`            |
+| Comparable         | Ordre naturel, `compareTo`             | `class Etudiant implements Comparable<Etudiant>`   |
+| Comparator         | Ordre externe, `compare`               | `Comparator<Etudiant> parNom = ...;`               |
+
+
+
