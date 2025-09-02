@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structure de données :: Structures de donnée</title>
+    <link>http://localhost:1313/420-311/sdd/index.html</link>
+    <description>Dans ce chapitre nous allons découvrir quelques structures de données et apprendre à choisir la bonne structure selon le problème.&#xA;Ⓜ️ Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util).&#xA;Ⓜ️ On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.&#xA;Ⓜ️ Nous commencerons par examiner les concepts communs qu’elles (structures de données) exploitent ainsi : généricité, itérateur, ordonnancement et relation d’ordre.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="http://localhost:1313/420-311/sdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Les structures de données (Java)</title>
+      <link>http://localhost:1313/420-311/sdd/sdd/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/sdd/index.html</guid>
+      <description>Notion de structure de données Ⓜ️ Le principe de base d’une structure de données, c’est de stocker des éléments auxquels le programmeur veut pouvoir accéder plus tard. On appelle les différentes utilisations possibles de la structure de données des opérations.&#xA;Les structures de données en Java Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util). On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.</description>
+    </item>
+  </channel>
+</rss>
