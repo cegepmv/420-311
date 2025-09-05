@@ -65,3 +65,11 @@ Une liste est une collection ordonnée (également connu sous le nom de séquenc
 Les listes permettent de multiples éléments nuls. Il n'est pas inconcevable que quelqu'un puisse vouloir mettre en place une liste qui interdit les doublons, par exemple : en lançant des exceptions d'exécution lorsque l'utilisateur tente de les insérer, cet usage est rare.
 
 ![Java choix collection diagram](/420-311/images/List_implementations.jpg)
+
+#### Les listes chaînées - classe LinkedList 
+La classe LinkedList permet de manipuler des listes dites "doublement chaînées". À chaque élément de la collection, on associe (de façon totalement transparente pour le programmeur) deux informations supplémentaires qui ne sont autres que les références à l’élément précédent et au suivant. Une telle collection peut ainsi être parcourue à l’aide d’un itérateur bidirectionnel de type ListIterator.
+
+Le grand avantage d’une telle structure est de permettre des ajouts ou des suppressions à une position donnée avec une efficacité en O (1) (ceci grâce à un simple jeu de modification de références).
+
+En revanche, l’accès à un élément en fonction de sa valeur ou de sa position dans la liste sera peu efficace puisqu’il nécessitera obligatoirement de parcourir une partie de la liste. L’efficacité sera donc en moyenne en O (N).
+ 
