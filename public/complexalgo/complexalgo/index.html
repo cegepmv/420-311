@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-311/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Qu’est-ce que la complexité algorithmique ? La complexité algorithmique désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d’une algorithme). Elle se décline en deux dimensions principales :
+La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Complexité algorithmique :: Structures de donnée">
+    <meta name="twitter:description" content="Qu’est-ce que la complexité algorithmique ? La complexité algorithmique désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d’une algorithme). Elle se décline en deux dimensions principales :
+La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.">
+    <meta property="og:url" content="http://localhost:1313/420-311/complexalgo/complexalgo/index.html">
+    <meta property="og:site_name" content="Structures de donnée">
+    <meta property="og:title" content="Complexité algorithmique :: Structures de donnée">
+    <meta property="og:description" content="Qu’est-ce que la complexité algorithmique ? La complexité algorithmique désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d’une algorithme). Elle se décline en deux dimensions principales :
+La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Complexité algorithmique">
+    <meta itemprop="name" content="Complexité algorithmique :: Structures de donnée">
+    <meta itemprop="description" content="Qu’est-ce que la complexité algorithmique ? La complexité algorithmique désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d’une algorithme). Elle se décline en deux dimensions principales :
+La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.">
+    <meta itemprop="wordCount" content="1184">
+    <title>Complexité algorithmique :: Structures de donnée</title><link rel="icon" href="/420-123/images/favicon.png" type="image/png">
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1757249716" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1757249716" defer></script>
+    <script src="/420-311/js/search-lunr.js?1757249716" defer></script>
+    <script src="/420-311/js/search.js?1757249716" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1757249716";
+    </script>
+    <script src="/420-311/js/lunr/lunr.min.js?1757249716" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1757249716" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1757249716" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1757249716" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1757249716" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1757249716" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1757249716" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1757249716" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1757249716" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/complexalgo\/complexalgo\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-311';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/420-311/complexalgo/complexalgo/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#quest-ce-que-la-complexité-algorithmique-">Qu’est-ce que la complexité algorithmique ?</a></li>
+    <li><a href="#comment-et-pourquoi-mesurer-la-complexité-">Comment et pourquoi mesurer la complexité ?</a></li>
+    <li><a href="#notation-big-o-pire-cas">Notation Big-O (pire cas)</a></li>
+    <li><a href="#exemples-en-java">Exemples en Java</a>
+      <ul>
+        <li><a href="#-o1--affichage-simple">🔹 O(1) – Affichage simple</a></li>
+        <li><a href="#-on--boucle-itération-sur-tous-les-élements">🔹 O(n) – Boucle (itération sur tous les élements)</a></li>
+        <li><a href="#-on--2--boucle-inbriquée">🔹 O(n ^ 2) – Boucle inbriquée</a></li>
+        <li><a href="#-olog-n--recherche-binaire">🔹 O(log n) – Recherche binaire</a></li>
+        <li><a href="#-comparaison-avec-des-exemples">🔹 Comparaison avec des exemples</a></li>
+      </ul>
+    </li>
+    <li><a href="#analyse-de-boucles">Analyse de boucles</a></li>
+    <li><a href="#complexité-spatiale-mémoire">Complexité spatiale (mémoire)</a></li>
+    <li><a href="#exercices">Exercices</a></li>
+    <li><a href="#fiche-synthèse">Fiche synthèse</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/index.html"><span itemprop="name">Structures de donnée</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/complexalgo/index.html"><span itemprop="name">Complexité algorithmique</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Complexité algorithmique</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/complexalgo/index.html" title="Complexité algorithmique (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/complexalgo/exercices/index.html" title="📝 Exercices sur complexité algorithmique (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable complexalgo" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="complexité-algorithmique">Complexité algorithmique</h1>
+
+<h2 id="quest-ce-que-la-complexité-algorithmique-">Qu’est-ce que la complexité algorithmique ?</h2>
+<p>La <strong>complexité algorithmique</strong> désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d&rsquo;une algorithme). Elle se décline en deux dimensions principales :</p>
+<ul>
+<li><strong>La complexité temporelle</strong>, qui mesure le temps d’exécution.</li>
+<li><strong>La complexité spatiale</strong>, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée.</li>
+</ul>
+<p>Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.</p>
+<p>Pour bien évaluer un algorithme, il faut examiner son comportement dans différents contextes :</p>
+<ul>
+<li>le <strong>meilleur cas</strong>,</li>
+<li>le <strong>pire cas</strong> (souvent privilégié pour anticiper les situations extrêmes),</li>
+<li>et le <strong>cas moyen</strong>, qui reflète son usage habituel.</li>
+</ul>
+<p>Comparer la complexité de plusieurs algorithmes résolvant le même problème permet ainsi de choisir la solution la plus adaptée en fonction des contraintes de performance.</p>
+<h2 id="comment-et-pourquoi-mesurer-la-complexité-">Comment et pourquoi mesurer la complexité ?</h2>
+<p>Pour mesurer la complexité d’un algorithme, on utilise la notation Big O, écrite sous la forme O(f(n)). Elle exprime la croissance du temps ou de la mémoire nécessaires en fonction de la taille de l’entrée, généralement notée n.</p>
+<p>Le but de cette notation est de mettre en évidence le comportement asymptotique : comment l’algorithme évolue lorsque n devient très grand. On ignore donc les détails secondaires (constantes et termes mineurs) pour ne retenir que le terme dominant. Par exemple, une complexité exacte de <code>3n² + 5n + 7</code> se résume en O(n²), puisque n² domine pour de grandes valeurs de n.</p>
+<ul>
+<li>
+<p>Un programme qui fonctionne n’est pas forcément <strong>efficace</strong>.</p>
+</li>
+<li>
+<p>Exemple concret :</p>
+<ul>
+<li>Rechercher un mot dans un dictionnaire papier (O(log n)).</li>
+<li>Rechercher une photo dans une pile désordonnée (O(n)).</li>
+</ul>
+</li>
+<li>
+<p>Plus les données sont grosses, plus le choix de l’algorithme est critique.</p>
+</li>
+</ul>
+<h2 id="notation-big-o-pire-cas">Notation Big-O (pire cas)</h2>
+<p>La notation <strong>Big-O</strong> décrit comment le <strong>temps d’exécution</strong> évolue en fonction de la taille de l’entrée (<em>n</em>).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Complexité</th>
+          <th>Exemple</th>
+          <th>Interprétation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>O(1)</strong></td>
+          <td>Accès à un tableau par index</td>
+          <td>Constant</td>
+      </tr>
+      <tr>
+          <td><strong>O(log n)</strong></td>
+          <td>Recherche binaire</td>
+          <td>Logarithmique : croissance lente</td>
+      </tr>
+      <tr>
+          <td><strong>O(n)</strong></td>
+          <td>Parcours d’une liste</td>
+          <td>Linéaire</td>
+      </tr>
+      <tr>
+          <td><strong>O(n log n)</strong></td>
+          <td>Tri rapide/merge sort</td>
+          <td>Plus rapide que O(n²)</td>
+      </tr>
+      <tr>
+          <td><strong>O(n²)</strong></td>
+          <td>Doubles boucles imbriquées</td>
+          <td>Quadratique : explose vite</td>
+      </tr>
+      <tr>
+          <td><strong>O(2^n)</strong></td>
+          <td>Problèmes combinatoires</td>
+          <td>Exponentielle : impraticable</td>
+      </tr>
+  </tbody>
+</table>
+<p>💡 Règle d’or :</p>
+<ul>
+<li>Pour <strong>n petit</strong>, toutes les méthodes semblent rapides.</li>
+<li>Pour <strong>n grand</strong>, seules les bonnes structures/algorithmes tiennent la route.</li>
+</ul>
+<p><a href="#R-image-8562aeabac853bc272f4bd62cd110360" class="lightbox-link"><img alt="Complexité algorithmique" class="lazy lightbox figure-image" loading="lazy" src="/420-311/images/Complex_algo.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8562aeabac853bc272f4bd62cd110360"><img alt="Complexité algorithmique" class="lazy lightbox lightbox-image" loading="lazy" src="/420-311/images/Complex_algo.png"></a></p>
+<h2 id="exemples-en-java">Exemples en Java</h2>
+<h3 id="-o1--affichage-simple">🔹 O(1) – Affichage simple</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">affiche</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(1)</span>
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(tab<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Aussi :</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">affiche</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(2) qui sera simplifée à O(1)</span>
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(tab<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(tab<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="-on--boucle-itération-sur-tous-les-élements">🔹 O(n) – Boucle (itération sur tous les élements)</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheTableau</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(n)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num : tab) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(num);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Même chose pour les boucles <code>for</code>, <code>while</code> et <code>do while</code></p>
+<h3 id="-on--2--boucle-inbriquée">🔹 O(n ^ 2) – Boucle inbriquée</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheTableau2D</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(n ^ 2)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num1 : tab) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num2 : tab) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(num1 <span style="color:#f92672">*</span> num2);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="-olog-n--recherche-binaire">🔹 O(log n) – Recherche binaire</h3>
+<p>⚠️ Nécessite un tableau trié.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">rechercheBinaire</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab, <span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> g <span style="color:#f92672">=</span> 0, d <span style="color:#f92672">=</span> tab.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (g <span style="color:#f92672">&lt;=</span> d) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> (g <span style="color:#f92672">+</span> d) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (tab<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> val) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (tab<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> val) g <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> d <span style="color:#f92672">=</span> m <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<blockquote>
+<p>Si nous cherchant dans un tableau d&rsquo;un million d&rsquo;éléments, 19 comparaisons seront suffusantes pour trouver l&rsquo;élément recherché.</p></blockquote>
+<h3 id="-comparaison-avec-des-exemples">🔹 Comparaison avec des exemples</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bench</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> 1_000_000;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) tab<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> cible <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Recherche linéaire</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> t1 <span style="color:#f92672">=</span> System.<span style="color:#a6e22e">nanoTime</span>();
+</span></span><span style="display:flex;"><span>        rechercheLineaire(tab, cible);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> t2 <span style="color:#f92672">=</span> System.<span style="color:#a6e22e">nanoTime</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lineaire : &#34;</span> <span style="color:#f92672">+</span> (t2 <span style="color:#f92672">-</span> t1) <span style="color:#f92672">/</span> 1_000_000.<span style="color:#a6e22e">0</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; ms&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Recherche binaire</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> t3 <span style="color:#f92672">=</span> System.<span style="color:#a6e22e">nanoTime</span>();
+</span></span><span style="display:flex;"><span>        rechercheBinaire(tab, cible);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> t4 <span style="color:#f92672">=</span> System.<span style="color:#a6e22e">nanoTime</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Binaire : &#34;</span> <span style="color:#f92672">+</span> (t4 <span style="color:#f92672">-</span> t3) <span style="color:#f92672">/</span> 1_000_000.<span style="color:#a6e22e">0</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; ms&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">rechercheLineaire</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab, <span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> x : tab) <span style="color:#66d9ef">if</span> (x <span style="color:#f92672">==</span> val) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">rechercheBinaire</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab, <span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> g <span style="color:#f92672">=</span> 0, d <span style="color:#f92672">=</span> tab.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (g <span style="color:#f92672">&lt;=</span> d) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> (g <span style="color:#f92672">+</span> d) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (tab<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> val) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (tab<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> val) g <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> 1; <span style="color:#66d9ef">else</span> d <span style="color:#f92672">=</span> m <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>On peut dire que :</p>
+<ul>
+<li>Un algorithme linéaire, qui met une seconde à traiter un tableau à 100 éléments, mettra 100 secondes à traiter un tableau à 10 000 éléments.</li>
+<li>Un algorithme quadratique qui met également une seconde à traiter le cas d&rsquo;un tableau à 100 éléments mettra 10 000 secondes (soit près de trois heures) à traiter le cas du tableau à 10 000 éléments.</li>
+<li>Un algorithme en O(2n) qui mettrait aussi une seconde avec 100 éléments qui mettrait 2100 secondes à traiter ne serait-ce que 200 éléments, soit environ 4.1022 années (4000 milliards de milliards d&rsquo;années).</li>
+</ul>
+<h2 id="analyse-de-boucles">Analyse de boucles</h2>
+<ul>
+<li>Boucle simple <code>for (int i=0; i&lt;n; i++)</code> → O(n).</li>
+<li>Boucles imbriquées <code>for i, for j</code> → O(n²).</li>
+<li>Boucle divisant par 2 <code>while (n &gt; 1) n/=2</code> → O(log n).</li>
+</ul>
+<h2 id="complexité-spatiale-mémoire">Complexité spatiale (mémoire)</h2>
+<p>La complexité spatiale (ou complexité mémoire) mesure la quantité de mémoire nécessaire pour exécuter un algorithme en fonction de la taille de l’entrée (n).</p>
+<p>💡 On ne parle pas seulement de la mémoire des données initiales, mais aussi :</p>
+<p>de la mémoire supplémentaire utilisée par l’algorithme (variables, structures temporaires, pile d’appels).</p>
+<ul>
+<li><strong>O(1)</strong> : pile, file, liste chaînée → mémoire proportionnelle aux données.</li>
+<li><strong>O(n)</strong> : tableau de n éléments.</li>
+<li><strong>O(n²)</strong> : matrice d’adjacence pour un graphe.</li>
+</ul>
+<p>Exemple 1 : Complexité spatiale O(1)</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheTableau</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(1) space</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num : tab) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(num);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Exemple 2 : Complexité spatiale O(n)</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afficheTableau</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(n) space (c&#39;est l&#39;espace qu&#39;on a alloué à l&#39;iterieur de cette méthode)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tabCopy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>tab.<span style="color:#a6e22e">length</span><span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num : tab) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(num);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Exemple 3 : Complexité spatiale O(n) (récursion)</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">factoriel</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// O(n) space</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">==</span> 0) <span style="color:#66d9ef">return</span> 1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> factoriel(n <span style="color:#f92672">-</span> 1);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<hr>
+<h2 id="exercices">Exercices</h2>
+<ol>
+<li>
+<p>Quelle est la complexité de :</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0; i<span style="color:#f92672">&lt;</span>n; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>0; j<span style="color:#f92672">&lt;</span>n; j<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> j);</span></span></code></pre></div>
+</li>
+<li>
+<p>Quelle est la complexité de :</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0; i<span style="color:#f92672">&lt;</span>n; i<span style="color:#f92672">*=</span>2) 
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i);</span></span></code></pre></div>
+</li>
+<li>
+<p>Quelle est la complexité spatiale d’un tableau <code>int[1000][1000]</code> ?</p>
+</li>
+</ol>
+<hr>
+<h2 id="fiche-synthèse">Fiche synthèse</h2>
+<ul>
+<li>
+<p>Complexité temporelle → combien de temps ça prend.</p>
+</li>
+<li>
+<p>Complexité spatiale → combien de mémoire ça utilise.</p>
+</li>
+<li>
+<p>Parfois, il faut choisir :</p>
+<ul>
+<li>
+<p>Moins de temps mais plus de mémoire (ex. table de hachage).</p>
+</li>
+<li>
+<p>Moins de mémoire mais plus de temps (ex. recherche linéaire dans une liste).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>On utilise la notion grand O (Big O) pour mesurer la complexité :</p>
+<ul>
+<li><strong>O(1)</strong> : accès direct.</li>
+<li><strong>O(log n)</strong> : recherche dichotomique, arbres équilibrés.</li>
+<li><strong>O(n)</strong> : parcours d’une collection.</li>
+<li><strong>O(n log n)</strong> : tris efficaces.</li>
+<li><strong>O(n²)</strong> : algorithmes naïfs à doubles boucles.</li>
+<li><strong>O(2^n)</strong> : problèmes combinatoires → à éviter.</li>
+</ul>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-311/index.html" style="display:inline-flex; align-items:center;">
+    <img src="/420-311/images/logo.png" width="35%" alt="logo">
+    <span style="font-size: 140%; white-space:normal;">Structures de donnée</span>
+</a>
+        </div>
+        <search><form action="/420-311/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-311/index.html"><a class="padding" href="/420-311/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-311/intro/index.html"><a class="padding" href="/420-311/intro/index.html">1. Préalables</a><ul id="R-subsections-58f2a84c91d5deefe8bdd3a21213404a" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/420-311/sdd/index.html"><a class="padding" href="/420-311/sdd/index.html">2. Structure de données</a><ul id="R-subsections-8f0e0d5606c5c794626752f57940f351" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/420-311/complexalgo/index.html"><a class="padding" href="/420-311/complexalgo/index.html">3. Complexité algorithmique</a><ul id="R-subsections-d8152842f8be755bbd704fe2dd18dc69" class="collapsible-menu">
+            <li class="active " data-nav-id="/420-311/complexalgo/complexalgo/index.html"><a class="padding" href="/420-311/complexalgo/complexalgo/index.html">Complexité algorithmique</a></li>
+            <li class="" data-nav-id="/420-311/complexalgo/exercices/index.html"><a class="padding" href="/420-311/complexalgo/exercices/index.html">📝 Exercices sur complexité algorithmique</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer">          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <div class="logo-title">Sara Boumehraz</div>
+            <br/>
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+          </a>
+          <br>Creative Commons BY-NC-SA</br></div>
+      </div>
+    </aside>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1757249716" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1757249716" defer></script>
+    <script src="/420-311/js/theme.js?1757249716" defer></script>
+  </body>
+</html>

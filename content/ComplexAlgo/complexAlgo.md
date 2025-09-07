@@ -87,7 +87,7 @@ public static void afficheTableau(int[] tab) {
 ```
 Même chose pour les boucles `for`, `while` et `do while`
 
-### 🔹 O(n ^ 2) – Bouble inbriquée
+### 🔹 O(n ^ 2) – Boucle inbriquée
 ```java
 public static void afficheTableau2D(int[] tab) {
     // O(n ^ 2)
@@ -169,10 +169,6 @@ On peut dire que :
 * Boucle simple `for (int i=0; i<n; i++)` → O(n).
 * Boucles imbriquées `for i, for j` → O(n²).
 * Boucle divisant par 2 `while (n > 1) n/=2` → O(log n).
-
-        > Un algorithme linéaire, qui met une seconde à traiter un tableau à 100 éléments, mettra 100 secondes à traiter un tableau à 10 000 éléments.
-        > Un algorithme quadratique qui met également une seconde à traiter le cas d'un tableau à 100 éléments mettra 10 000 secondes (soit près de trois heures) à traiter le cas du tableau à 10 000 éléments.
-        > Un algorithme en O(2n) qui mettrait aussi une seconde avec 100 éléments qui mettrait 2100 secondes à traiter ne serait-ce que 200 éléments, soit environ 4.1022 années (4000 milliards de milliards d'années).
 
 
 ## Complexité spatiale (mémoire)

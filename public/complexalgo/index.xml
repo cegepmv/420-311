@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complexité algorithmique :: Structures de donnée</title>
+    <link>http://localhost:1313/420-311/complexalgo/index.html</link>
+    <description>Dans ce chapitre, nous allons voir ce que signifie la notation Big-O et analyser la complexité d’un algorithme simple, ainsi que comparer plusieurs approches pour résoudre un même problème. En fin, nous allons voir comment mesurer expérimentalement la performance d’un programme en Java.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Sat, 06 Sep 2025 17:51:48 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-311/complexalgo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Complexité algorithmique</title>
+      <link>http://localhost:1313/420-311/complexalgo/complexalgo/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/complexalgo/complexalgo/index.html</guid>
+      <description>Qu’est-ce que la complexité algorithmique ? La complexité algorithmique désigne en informatique la quantité de ressources qu’un algorithme consomme lors de son exécution (On utilise Grand O pour décrire la performance d’une algorithme). Elle se décline en deux dimensions principales :&#xA;La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.</description>
+    </item>
+    <item>
+      <title>📝 Exercices sur complexité algorithmique</title>
+      <link>http://localhost:1313/420-311/complexalgo/exercices/index.html</link>
+      <pubDate>Sat, 06 Sep 2025 17:51:48 -0400</pubDate>
+      <guid>http://localhost:1313/420-311/complexalgo/exercices/index.html</guid>
+      <description>🔹 Exercice 1 : for (int i = 0; i &lt; n; i++) { System.out.println(i); }&#xD;👉 Quelle est la complexité temporelle en fonction de n ?&#xA;🔹 Exercice 2 while (n &gt; 1) { n = n / 2; }&#xD;👉 Quelle est la complexité temporelle ?&#xA;🔹 Exercice 3 public static boolean rechercheLineaire(int[] tab, int val) { for (int x : tab) { if (x == val) return true; } return false; }&#xD;👉 Quelle est la complexité temporelle dans le pire cas ?</description>
+    </item>
+  </channel>
+</rss>
