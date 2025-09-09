@@ -2,32 +2,32 @@ import java.util.LinkedList;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
-        LinkedList<String> liste = new LinkedList<>();
+        LinkedList<String> cars = new LinkedList<>();
 
         // Ajouts
-        liste.add("Alice");       // fin
-        liste.addFirst("Zara");   // début
-        liste.addLast("Bob");     // fin
-        System.out.println("Liste : " + liste);
+        cars.add("Audi");       // fin
+        cars.addFirst("Toyota");   // début
+        cars.addLast("Ford");     // fin
+        System.out.println("Liste : " + cars);
 
         // Accès
-        System.out.println("Premier : " + liste.getFirst());
-        System.out.println("Dernier : " + liste.getLast());
-        System.out.println("Index 1 : " + liste.get(1));
+        System.out.println("Premier : " + cars.getFirst());
+        System.out.println("Dernier : " + cars.getLast());
+        System.out.println("Index 1 : " + cars.get(1));
 
         // Suppressions
-        liste.removeFirst();
-        liste.removeLast();
-        System.out.println("Après suppressions : " + liste);
+        cars.removeFirst();
+        cars.removeLast();
+        System.out.println("Après suppressions : " + cars);
 
         // Utilisation comme pile
-        liste.push("Charlie");
-        System.out.println("Après push : " + liste);
-        System.out.println("Pop → " + liste.pop());
+        cars.push("Honda");
+        System.out.println("Après push : " + cars);
+        System.out.println("Pop → " + cars.pop());
 
         // Utilisation comme file
-        liste.offer("David");
-        System.out.println("Après offer : " + liste);
-        System.out.println("Poll → " + liste.poll());
+        cars.offer("Opel");
+        System.out.println("Après offer : " + cars);
+        System.out.println("Poll → " + cars.poll());
     }
 }

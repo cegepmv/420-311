@@ -1,75 +1,291 @@
 +++
 draft = false
-title = 'Les structures de données (Java)'
-weight = 2.1
+title = 'Les structures de données'
+weight = 21
 +++
 
-## <ins> Notion de structure de données</ins>
+## Notion de structure de données</ins>
 
 Ⓜ️ Le principe de base d'une structure de données, c'est de stocker des éléments auxquels le programmeur veut pouvoir accéder plus tard. On appelle les différentes utilisations possibles de la structure de données des opérations.
 
-## <ins> Les structures de données en Java 
-Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util). 
-On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les    vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.
+## Classification des structures de données
 
-![Java collection hierarchy](/420-311/images/Collection_Hierarchy.jpg)
+### 🔹 Structures de base
 
-![Java choix collection diagram](/420-311/images/choix_sdd.png)
+#### <ins> **Tableau (array)** : 
+Une collection d’éléments de même type stockés en mémoire de façon contiguë.
+Chaque élément est accessible par son index.
 
-### Structure générale des collections en Java 
-Une collection représente un groupe d'objets, connu par ses éléments. Certaines collections acceptent les doublons, d'autres pas. Certaines sont ordonnées, d'autres pas. 
-
-![Java choix collection diagram](/420-311/images/Collection_Hierarchy_Java.jpg)
-
-### Interface Collection 
-Depuis la version 1.6 de Java, il y a un changement dans la structure des collections. Il y a eu l’ajout du package `java.util.concurrent`
-
-![Java choix collection diagram](/420-311/images/Collection_Interfaces.jpg)
-
-Vous pourrez généralement vous contenter de connaître les fonctionnalités supplémentaires qu’offre chacune des classes LinkedList, ArrayList, Vector, HashSet, TreeSet, PriorityQueue et ArrayDeque. Mais, dans certains cas, vous devrez avoir quelques notions sur l’architecture d’interfaces employée par les concepteurs de la librairie. Elle se présente comme suit :
-
-Collection
-
-* List implémentée par LinkedList, ArrayList et Vector
-* Set implémentée par HashSet
-    * SortedSet implémentée par TreeSet
-        * NavigableSet implémentée par TreeSet (Java 6)
-* Queue (JDK 5.0) implémentée par LinkedList, PriorityQueue
-    * Deque (Java 6) implémentée par ArrayDeque, LinkedList
-
-### L'interface Iterable
-![Java choix collection diagram](/420-311/images/Iterator_interface.jpg)
-
-```java
-public interface <E> Collection extends Iterable <E>
+#### Schéma
 ```
-`Collection` est l'interface racine dans la hiérarchie des collections. Une `collection` représente un groupe d'objets, connu sous le nom de ses éléments. Certaines collections :
-* Permettent de dupliquer les éléments et d'autres pas.
-* Elles sont ordonnées et d'autres pas.
-
-Le JDK ne fournit pas directement les implémentations de cette interface : il fournit des implémentations de sous-interfaces plus spécifiques telles que Set et List.
-
-### L'interface List
-
-![Java choix collection diagram](/420-311/images/List_interface.jpg)
-
-```java
-public interface List<E> extends Collection<E>
+Index :  0    1    2    3
+Valeur: [10] [20] [30] [40]
 ```
 
-Une liste est une collection ordonnée (également connu sous le nom de séquence).
 
-* L'utilisateur de cette interface à un contrôle précis sur l'endroit où est inséré chaque élément dans la liste.
-* L'utilisateur peut accéder aux éléments par leur index (position dans la liste), et rechercher des éléments dans la liste. Les listes permettent généralement les éléments dupliqués.
+#### Complexité
 
-Les listes permettent de multiples éléments nuls. Il n'est pas inconcevable que quelqu'un puisse vouloir mettre en place une liste qui interdit les doublons, par exemple : en lançant des exceptions d'exécution lorsque l'utilisateur tente de les insérer, cet usage est rare.
+* Accès direct : **O(1)**
+* Recherche d’une valeur : **O(n)**
+* Insertion/suppression : **O(n)** (décalage nécessaire)
 
-![Java choix collection diagram](/420-311/images/List_implementations.jpg)
+#### Avantages
 
-#### Les listes chaînées - classe LinkedList 
-La classe LinkedList permet de manipuler des listes dites "doublement chaînées". À chaque élément de la collection, on associe (de façon totalement transparente pour le programmeur) deux informations supplémentaires qui ne sont autres que les références à l’élément précédent et au suivant. Une telle collection peut ainsi être parcourue à l’aide d’un itérateur bidirectionnel de type ListIterator.
+* Accès rapide par index.
+* Simple à utiliser.
 
-Le grand avantage d’une telle structure est de permettre des ajouts ou des suppressions à une position donnée avec une efficacité en O (1) (ceci grâce à un simple jeu de modification de références).
+#### Inconvénients
 
-En revanche, l’accès à un élément en fonction de sa valeur ou de sa position dans la liste sera peu efficace puisqu’il nécessitera obligatoirement de parcourir une partie de la liste. L’efficacité sera donc en moyenne en O (N).
- 
+* Taille fixe (souvent).
+* Insertion/suppression coûteuses.
+
+
+#### Exemple réel
+
+Les sièges d’un avion numérotés → on sait directement où est le siège 25B.
+
+#### <ins> **Liste chaînée (linked list)** : 
+
+Une séquence de **nœuds** où chaque nœud contient une valeur et une référence vers le suivant (et parfois vers le précédent → liste doublement chaînée).
+
+#### Schéma
+
+```
+Tête → [10|•] → [20|•] → [30|null]
+```
+
+![Single and Doubly Linked List](/420-311/images/LinkedListDigram.jpg)
+
+Liste simplement chaînée et liste doublement chaînée 
+
+![Liste simplement chaînée circulaire](/420-311/images/CirclySinglyLinkedList.webp)
+Liste simplement chaînée circulaire
+
+#### Complexité
+
+* Insertion/suppression en tête : **O(1)**
+
+    Insertion : 
+    - à la fin O(1)
+    - au début O(1)
+    - au milieu O(n)
+    
+    suppression : 
+    - au début O(1)
+    - à la fin O(n) / O(1) dans les Listes doublement chaînées.
+    - au milieu O(n)
+* Accès à un élément : **O(n)**
+
+#### Avantages
+
+* Taille dynamique.
+* Insertion/suppression rapides en tête/fin.
+
+#### Inconvénients
+
+* Accès séquentiel (lent).
+* Plus de mémoire (pointeurs).
+
+#### Exemple réel
+
+Un collier de perles où chaque perle est attachée à la suivante.
+
+
+### 🔹 Structures linéaires spécialisées
+#### <ins> **Pile (Stack)**
+
+Structure **LIFO** (Last In, First Out).
+Le dernier élément inséré est le premier retiré.
+
+#### Schéma
+
+```
+Push(10) → Push(20) → Push(30)
+Pile: [30] [20] [10]
+Pop() → 30
+```
+
+![Pile](/420-311/images/stack.webp)
+stack
+
+#### Opérations
+
+* `push(x)` : ajouter en haut.
+* `pop()` : retirer le dernier.
+* `peek()` : lire le dernier sans le retirer.
+
+#### Complexité
+
+* Insertion/retrait : **O(1)**
+
+#### Exemple réel
+
+Pile d’assiettes à laver à la main.
+
+
+#### <ins> **File (Queue)**
+
+Structure **FIFO** (First In, First Out).
+Le premier élément inséré est le premier retiré.
+
+#### Schéma
+
+```
+Enqueue(10) → Enqueue(20) → Enqueue(30)
+File: [10] [20] [30]
+Dequeue() → 10
+```
+
+![File](/420-311/images/Data_Queue.png)
+File
+
+#### Opérations
+
+* `enqueue(x)` : ajouter à la fin.
+* `dequeue()` : retirer au début.
+* `peek()` : lire le premier sans le retirer.
+
+#### Complexité
+
+* Insertion/retrait : **O(1)**
+
+#### Exemple réel
+
+File d’attente à la caisse d’un magasin.
+
+#### <ins> **File de priorité (Priority Queue / Tas / Heap)**
+
+Une file où chaque élément a une **priorité**. L’élément avec la plus haute priorité sort en premier.
+Souvent implémentée avec un **tas binaire (heap)**.
+
+#### Schéma (tas min)
+
+```
+        10
+       /  \
+     20    15
+    / \
+  30   25
+```
+
+[Explication simple](https://www.youtube.com/watch?v=K7G287nYk14)
+
+#### Complexité
+
+* Insertion : **O(log n)**
+* Extraction du min/max : **O(log n)**
+
+#### Exemple réel
+
+Service d’urgence à l’hôpital → les cas graves passent avant.
+
+
+### 🔹 Structures hiérarchiques
+
+
+#### <ins> **Arbre (Tree)**
+
+Une structure hiérarchique composée de **nœuds** reliés par des arêtes.
+Chaque nœud a :
+
+* une valeur,
+* des enfants.
+
+#### Schéma (arbre binaire)
+
+```
+        10
+       /  \
+      5    20
+     / \     \
+    2   8     30
+```
+
+#### Types
+
+* **Arbre binaire** : max 2 enfants.
+* **Arbre binaire de recherche (BST)** : gauche < racine < droite.
+* **Arbres équilibrés** (AVL, Red-Black).
+
+#### Complexité (BST équilibré)
+
+* Recherche, insertion, suppression : **O(log n)**
+
+#### Exemple réel
+
+Arborescence des dossiers/fichiers dans un ordinateur.
+
+#### <ins> **Graphe (Graph)**
+
+Un ensemble de **sommets (nœuds)** reliés par des **arêtes (liens)**.
+Peut être orienté ou non, pondéré ou non.
+
+#### Schéma
+
+```
+ A —— B —— C
+ |     \
+ D      E
+```
+
+#### Représentations
+
+* Liste d’adjacence.
+* Matrice d’adjacence.
+
+#### Complexité
+
+* Parcours BFS/DFS : **O(V + E)** (V = sommets, E = arêtes).
+
+#### Exemple réel
+
+Un réseau social (Facebook : personnes = sommets, amitiés = arêtes).
+
+### 🔹 Structures de recherche
+
+#### <ins> **Table de hachage (Hash Table / HashMap)**
+
+Associe une **clé** à une **valeur** via une **fonction de hachage**.
+
+#### Schéma
+
+```
+Clé → Hachage → Index → Valeur
+"Bob" → h("Bob")=2 → table[2] = 90
+```
+
+#### Complexité
+
+* Insertion/recherche/suppression : **O(1)** en moyenne.
+
+#### Avantages
+
+* Accès très rapide.
+
+#### Inconvénients
+
+* Collisions possibles (deux clés pour le même index).
+* Consomme plus de mémoire.
+
+#### Exemple réel
+
+Annuaire téléphonique (nom → numéro).
+
+---
+
+## 📌 Tableau récapitulatif
+
+| Structure     | Accès    | Insertion | Suppression | Exemple concret       |
+| ------------- | -------- | --------- | ----------- | --------------------- |
+| Tableau       | O(1) (index) / O(n) (valeur)    | O(n)      | O(n)        | Sièges d’avion        |
+| Liste chaînée | O(n)     | O(1) en tête ou fin    | O(1) en tête       | Collier de perles     |
+| Pile (Stack)  | O(n)     | O(1)      | O(1)        | Pile d’assiettes      |
+| File (Queue)  | O(n)     | O(1)      | O(1)        | File d’attente        |
+| Tas (Heap)    | O(n)     | O(log n)  | O(log n)    | Urgences hôpital      |
+| Arbre (BST)   | O(log n) | O(log n)  | O(log n)    | Arborescence fichiers |
+| Graphe        | O(V+E)   | O(1)      | O(1)        | Réseau social         |
+| Hash Table    | O(1)     | O(1)      | O(1)        | Dictionnaire          |
+
+
+
+
