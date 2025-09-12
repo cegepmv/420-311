@@ -5,9 +5,6 @@
     <lastmod>2025-08-26T08:21:07-04:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/420-311/sdd/sdd/index.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/420-311/sdd/index.html</loc>
   </url>
   <url>
@@ -23,6 +20,12 @@
   <url>
     <loc>http://localhost:1313/420-311/intro/quiz/index.html</loc>
     <lastmod>2025-08-26T08:21:07-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/sdd/sdd/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/sdd/javasdd/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/420-311/complexalgo/complexalgo/index.html</loc>

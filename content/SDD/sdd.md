@@ -48,6 +48,25 @@ Les sièges d’un avion numérotés → on sait directement où est le siège 2
 
 Une séquence de **nœuds** où chaque nœud contient une valeur et une référence vers le suivant (et parfois vers le précédent → liste doublement chaînée).
 
+#### * Liste simplement chaînée 
+🌼 Les listes simplement chaînées sont des structures de données semblables aux tableaux. Les éléments de la liste sont souvent appelés Liens ou Nœuds.
+🌼 Un élément de la liste se compose :
+	Un autre pointeur qui pointe vers l'élément suivant,
+	Le pointeur suivant du dernier élément doit pointer vers NULL (la fin de la liste).
+	En plus un élément se compose d’une valeur
+🌼 Pour accéder à un élément, la liste peut être parcourue dans les deux sens :
+🌼 En commençant en tête de liste, le pointeur suivant permettra le déplacement vers le prochain élément.
+🌼 En bref, le déplacement se fait dans une seule direction, du premier vers le dernier élément.
+
+#### * Liste doublement chaînée 
+
+🌼 Les listes doublement chaînées sont des structures de données semblables aux listes simplement chaînées. Les éléments de la liste sont souvent appelés Liens ou Nœuds. 
+La classe LinkedList permet de manipuler des listes dites "doublement chaînées". À chaque élément de la collection, on associe (de façon totalement transparente pour le programmeur) deux informations supplémentaires qui ne sont autres que les références à l’élément précédent et au suivant. Une telle collection peut ainsi être parcourue à l’aide d’un itérateur bidirectionnel de type ListIterator.
+
+Le grand avantage d’une telle structure est de permettre des ajouts ou des suppressions à une position donnée avec une efficacité en O (1) (ceci grâce à un simple jeu de modification de références).
+
+En revanche, l’accès à un élément en fonction de sa valeur ou de sa position dans la liste sera peu efficace puisqu’il nécessitera obligatoirement de parcourir une partie de la liste. L’efficacité sera donc en moyenne en O (N).
+
 #### Schéma
 
 ```
@@ -287,5 +306,13 @@ Annuaire téléphonique (nom → numéro).
 | Hash Table    | O(1)     | O(1)      | O(1)        | Dictionnaire          |
 
 
+### Dictionnaire et table associative (l'interface Map)
 
+🌼 Une table associative permet de conserver une information associant deux parties nommées clé et valeur.
+🌼 Elle est principalement destinée à retrouver la valeur associée à une clé donnée. Les exemples les plus caractéristiques de telles tables sont :
+
+	👍 Le dictionnaire : à un mot (clé), on associe une valeur qui est sa définition,
+
+	👍 L’annuaire usuel : à un nom (clé), on associe une valeur comportant le numéro de téléphone et, éventuellement, une adresse,
+	👍 L’annuaire inversé : à un numéro de téléphone (qui devient la clé), on associe une valeur comportant le nom et, éventuellement, une adresse.
 

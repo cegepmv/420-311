@@ -55,3 +55,5 @@ Le principe de base d'une structure de données, c'est de stocker des éléments
 
 
 ![Java collection hierarchy](/420-311/images/Collection_Hierarchy.jpg)
+
+

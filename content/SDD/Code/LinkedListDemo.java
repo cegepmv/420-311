@@ -2,6 +2,17 @@ import java.util.LinkedList;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
+        LinkedList<String> playlist = new LinkedList<>();
+        playlist.add("Song A");
+        playlist.add("Song B");
+        playlist.add("Song C");
+
+        playlist.addFirst("Intro");
+        playlist.removeLast();
+
+        System.out.println("Playlist : " + playlist);
+
+        
         LinkedList<String> cars = new LinkedList<>();
 
         // Ajouts

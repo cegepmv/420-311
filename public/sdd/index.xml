@@ -8,11 +8,18 @@
     <language>fr-ca</language>
     <atom:link href="http://localhost:1313/420-311/sdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Les structures de données (Java)</title>
+      <title>Les structures de données</title>
       <link>http://localhost:1313/420-311/sdd/sdd/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-311/sdd/sdd/index.html</guid>
-      <description>Notion de structure de données Ⓜ️ Le principe de base d’une structure de données, c’est de stocker des éléments auxquels le programmeur veut pouvoir accéder plus tard. On appelle les différentes utilisations possibles de la structure de données des opérations.&#xA;Les structures de données en Java Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util). On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.</description>
+      <description>Notion de structure de données Ⓜ️ Le principe de base d’une structure de données, c’est de stocker des éléments auxquels le programmeur veut pouvoir accéder plus tard. On appelle les différentes utilisations possibles de la structure de données des opérations.&#xA;Classification des structures de données 🔹 Structures de base Tableau (array) : Une collection d’éléments de même type stockés en mémoire de façon contiguë. Chaque élément est accessible par son index.</description>
+    </item>
+    <item>
+      <title>Les structures de données en Java </title>
+      <link>http://localhost:1313/420-311/sdd/javasdd/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/javasdd/index.html</guid>
+      <description>Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util). On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.</description>
     </item>
   </channel>
 </rss>
