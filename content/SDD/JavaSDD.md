@@ -306,9 +306,9 @@ m.put ("m", 3) ;
 🌼 Notez que, comme pour les autres collections, les clés et les valeurs doivent être des objets. Il n’est théoriquement pas nécessaire que toutes les clés soient de même type, pas plus que les éléments. En pratique, ce sera presque toujours le cas pour des questions évidentes de facilité d’exploitation de la table.
 
 #### 👍 Recherche d’information
-🌼 On obtient la valeur associée à une clé donnée à l’aide de la méthode get, laquelle fournit nulle si la clé cherchée n’est pas présente (K représente le type de la clé) :
+🌼 On obtient la valeur associée à une clé donnée à l’aide de la méthode get, laquelle fournit nulle si la clé cherchée n’est pas présente (V représente le type de la valeur) :
 ```java
-K o = get ("x") ; // fournit la valeur associée à la clé "x" //
+V o = get ("x") ; // fournit la valeur associée à la clé "x" //
 
 if (o == null) System.out.println ("Aucune valeur associée à la clé x") ;
 ```
@@ -319,7 +319,7 @@ if (o == null) System.out.println ("Aucune valeur associée à la clé x") ;
 #### 👍 Suppression d’information
 🌼 On peut supprimer un élément d’une table en utilisant la méthode remove, laquelle fournit en retour l’ancienne valeur associée si la clé existe ou la valeur null dans le cas contraire :
 ```java
-K val = remove (cle) ;	// supprime l’élément (clé + valeur) de clé "x" if (val != null)
+V val = remove (cle) ;	// supprime l’élément (clé + valeur) de clé "x" if (val != null)
 System.out.println ("On a supprimé l’élément de clé " + cle + " et de valeur" + val);
 ```
 
