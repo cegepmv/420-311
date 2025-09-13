@@ -561,3 +561,29 @@ Soit le diagramme de classes suivant :
 			
 			i.	Prix réel = prix du produit + prix du produit*usTax. 
 3.	Écrire une méthode de service qui permet de calculer le total prix (la somme totale) des produits de tous les fournisseurs américains. 
+
+### Exercice 11 :
+Soit la String suivante: String chaineDepart = "$_%4*1;-0er2bo%t?c(o(id>er7dn1ev"
+écrire le programme qui traite l’algorithme suivant:
+1.	Lire la String « chaineDepart »
+2.	Parcourir la String et appliquer le traitement suivant:
+* Mettre les 04 premiers caractères dans une Stack (appelée stack01);
+* Mettre les 04 caractères suivants dans une liste (appelée liste01);
+* Mettre les 04 caractères suivants dans un vecteur (appelée vecteur01);
+* Mettre le reste de la chaine dans une Queue (appelée queue01);
+* Déclarer un String vide appelé resultat01;
+* Déclarer un String vide appelé resultat02;
+* Dépilez le  premier élément de la stack01 et ajoutez-le à la String resultat01;
+* Ajouter à la String resultat01, le 2e qui se trouve dans liste01;
+* Parcourez le vecteur01, si l’élément est un chiffre, mettez-le dans la String resultat01, sinon mettez-le dans la String resultat02;
+* Défiler la queue01, mettez seulement les lettres alphabétiques dans la String resultat02.
+* Inversez les 02 Strings;
+* Déclarer un String vide appelé resultatFinal;
+* Copiez les 08 premiers caractères de la String resultat02 dans la String resultatFinal;
+* Ajoutez un espace à la String resultatFinal;
+* Copiez les 02 premiers éléments de la String resultat01 dans la String resultatFinal;
+* Ajoutez un espace à la String resultatFinal;
+* Copiez le reste des caractères de la String resultat02 dans la String resultatFinal;
+* Ajoutez un espace à la String resultatFinal;
+* Copiez le reste des caractères de la String resultat01 dans la String resultatFinal;
+* Afficher le résultat;  
