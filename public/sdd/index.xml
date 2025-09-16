@@ -6,6 +6,7 @@
     <description>Dans ce chapitre nous allons découvrir quelques structures de données et apprendre à choisir la bonne structure selon le problème.&#xA;Ⓜ️ Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util).&#xA;Ⓜ️ On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.&#xA;Ⓜ️ Nous commencerons par examiner les concepts communs qu’elles (structures de données) exploitent ainsi : généricité, itérateur, ordonnancement et relation d’ordre.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/420-311/sdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Les structures de données</title>
@@ -20,6 +21,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-311/sdd/javasdd/index.html</guid>
       <description>Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util). On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.</description>
+    </item>
+    <item>
+      <title>Algorithmes codage de la liste doublement chaînée</title>
+      <link>http://localhost:1313/420-311/sdd/linkedlist/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/linkedlist/index.html</guid>
+      <description>🌼 Pour coder une liste doublement chaînée en orientée objet, on doit coder :&#xA;La classe Lien ou Nœud Nous n’allons pas utiliser la notion de générique. La classe Lien ou nœud possède les champs suivants : Suivant de type Lien ou Nœud; Précédent de type Lien ou Nœud; Valeur de type entier. La classe Lien ou nœud possède les méthodes suivantes: Constructeur avec un paramètre qui sera la valeur; Getter/Setter pour les champs; Méthode d’affichage de la valeur. La classe ListeDoublementChainee Les champs de la classe : Premier de type Lien ou Nœud; Dernier de type Lien ou Nœud. Les méthodes: Un constructeur sans paramètres : ou il faut mettre Premier et Dernier à NULL; Une méthode booléenne estVide () : qui teste si Premier est NULL; Une méthode : public void insererEnDebutListe (int valeur) { Déclarer un nouveau Lien et lui passer la valeur en paramètres de la méthode; Si la liste estVide (){ Dernier = nouveauLien; } Sinon { Premier.Precedent = nouveauLien; nouveauLien.suivant = Premier; } Premier = nouveauLien; }&#xD;Une méthode : public void insererEnFinDeListe (int valeur) { Déclarer un nouveauLien et lui passer la valeur en paramètres de la méthode; Si la liste estVide (){ Premier = nouveauLien; } Sinon { Dernier.suivant = nouveauLien; nouveauLien.precedent = Dernier; } Dernier = nouveauLien; }&#xD;public boolean insererApresValeur (int valeurPosition, int valeurAInserer) { Lien courant = premier; Tant que (courant.valeur n’est pas égale à valeurPosition){ courant = courant.suivant; si (courant est NULL) { retourner FALSE; } Déclarer un nouveauLien et lui passer la valeurAInserer en paramètres de la méthode; Si (courant = Dernier){ nouveauLien.suivant = null; dernier = nouveauLien; } Sinon { nouveauLien.suivant = courant.suivant; courant.suivant.precedent = nouveauLien; } nouveauLien.precedent = courant; courant.suivant = nouveauLien; retourner true; // on a trouvé, on insére &#34;valeurAInserer&#34; } }</description>
+    </item>
+    <item>
+      <title>📝 Exercices : Collections en Java</title>
+      <link>http://localhost:1313/420-311/sdd/exercicessdd/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/exercicessdd/index.html</guid>
+      <description>Étude de cas 1 Étude de cas Soit les classes suivantes avec leurs attributs successives : Classe Compagnie assurance :&#xA;numéro de la compagnie (unique), nom de compagnie, liste assurances : une collection d’assurances de type List. Classe Assurance : code d’assurance (unique), nom de l’assurance, prix de l’assurance, type d’assurance (Habitation, Auto ou Vie). Écrire en Java un programme qui permet la gestion de la compagnie d’assurance. Dans ce programme vous devez coder les méthodes suivantes: Afficher le chiffre d’affaires total de la compagnie (somme totale des assurances). Afficher l’inventaire (la liste des assurances) de la compagnie triée en ordre décroissant de prix d’assurance (du plus grand vers le plus petit). Convertir la liste lue en une collection de type Map (Integer, Assurance). Trier la Map par clé (numéro d’assurance). Parcourir la liste des assurances et modifier les prix des assurances comme suit : Augmenter le prix de l’assurance habitation de 10% Diminuer le prix d’assurance auto de 8% Diviser le prix de l’assurance vie par : 3 si le code d’assurance est impair. 4 si le code d’assurance est pair. Étude de cas 2 La classe Compte possède les attributs suivants :</description>
     </item>
   </channel>
 </rss>
