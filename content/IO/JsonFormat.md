@@ -4,10 +4,6 @@ draft = false
 title = 'Format JSON'
 +++
 
-Excellent sujet 👌 ! Le **format JSON** (*JavaScript Object Notation*) est incontournable en développement moderne. Voici un **cours clair et structuré** que tu peux donner à tes étudiants.
-
----
-
 # 📖 Le format JSON
 
 ## 1. Définition
