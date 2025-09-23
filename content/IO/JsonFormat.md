@@ -92,7 +92,7 @@ Résultat attendu :
         String donnees = "{\"numCompte\":98765,\"nom\":\"Martin\",\"prenom\":\"Bob\",\"solde\":1500.0}";
 
         // Conversion JSON → Objet
-        Client client1 = mapper.readValue(donnees, client1.class);
+        Client client1 = mapper.readValue(donnees, client.class);
         System.out.println("Client : " + client1.getNom() + " " + client1.getPrenom() +
                            ", Compte : " + client1.getNumCompte() +
                            ", Solde : " + client1.getSolde());
@@ -128,11 +128,12 @@ for (Client c : clients) {
 
 // créer un fichier json avec liste de clients
 List<Client> listeClients = Arrays.asList(clients);
-Client client = new Client(12345, "Dupont", "Alice", 2500.75);
-listeClients.add(client)
-mapper.writeValue(new FileInputStream("clients.json"), listeClients);
+
+// créer un fichier json avec liste de clients
+mapper.writeValue(new FileOutputStream("clients.json"), listeClients);
 
 List<Client> clientsLus = mapper.readValue(new FileInputStream("clients.json"), new TypeReference<List<Client>>() {});
+
 ```
 
 Résultat attendu : 
