@@ -1,7 +1,7 @@
 +++
 title = "AlgoSearchSort"
 type = "chapter"
-draft = flase
+draft = false
 weight = 6 
 pre = "6. "
 +++
