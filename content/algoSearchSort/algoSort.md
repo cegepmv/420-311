@@ -1,9 +1,8 @@
----
-date = '2025-10-08T13:51:33-04:00'
++++
 draft = true
 title = '📘 Chapitre : Les algorithmes de tri'
 weight = 62
----
++++
 
 
 ### **Tri à bulles (Bubble Sort)**
