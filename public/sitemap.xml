@@ -6,11 +6,17 @@
   </url>
   <url>
     <loc>http://localhost:1313/420-311/sdd/index.html</loc>
-    <lastmod>2025-09-16T09:06:07-04:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/420-311/complexalgo/index.html</loc>
     <lastmod>2025-09-06T17:51:48-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/io/index.html</loc>
+    <lastmod>2025-09-19T11:51:10-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/genericity/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/420-311/intro/revisionpoo/index.html</loc>
@@ -36,6 +42,12 @@
     <loc>http://localhost:1313/420-311/sdd/linkedlist/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/420-311/sdd/compare/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/sdd/hachage/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/420-311/sdd/exercicessdd/index.html</loc>
   </url>
   <url>
@@ -45,7 +57,19 @@
     <loc>http://localhost:1313/420-311/ressourcesutiles/gestioncodesource/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/420-311/io/jsonformat/index.html</loc>
+    <lastmod>2025-09-19T11:51:10-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/420-311/index.html</loc>
+    <lastmod>2025-09-19T11:51:10-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/io/javaapi/index.html</loc>
+    <lastmod>2025-09-19T09:47:47-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/ressourcesutiles/maven/index.html</loc>
     <lastmod>2025-09-16T09:34:50-04:00</lastmod>
   </url>
   <url>
@@ -54,6 +78,12 @@
   </url>
   <url>
     <loc>http://localhost:1313/420-311/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/ressourcesutiles/javaconv/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-311/genericity/javagen/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/420-311/tags/index.html</loc>

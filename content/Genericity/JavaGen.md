@@ -342,3 +342,10 @@ System.out.println(max(entiers)); // 9
 
 [Lien vers statistiques langages de programmation 2024](https://spectrum.ieee.org/top-programming-languages-2024)
 
+
+
+## Ressources 
+
+[Documentation : Generic Types](https://docs.oracle.com/javase/tutorial/java/generics/types.html)
+
+[Documentation : Restrictions on Generics](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html)

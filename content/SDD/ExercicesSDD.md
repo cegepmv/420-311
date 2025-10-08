@@ -1,7 +1,7 @@
 +++
 draft = false
 title = '📝 Exercices : Collections en Java'
-weight = 24
+weight = 25
 +++
 
 
@@ -10,15 +10,18 @@ weight = 24
 ## Étude de cas 1
 Étude de cas 
 Soit les classes suivantes avec leurs attributs successives : 
+
 Classe Compagnie assurance :
 -	numéro de la compagnie (unique), 
 -	nom de compagnie, 
 -	liste assurances : une collection d’assurances de type List.
+
 Classe Assurance :
 -	code d’assurance (unique), 
 -	nom de l’assurance, 
 -	prix de l’assurance, 
 -	type d’assurance (Habitation, Auto ou Vie). 
+
 Écrire en Java un programme qui permet la gestion de la compagnie d’assurance. Dans ce programme vous devez coder les méthodes suivantes:
 1.	Afficher le chiffre d’affaires total de la compagnie (somme totale des assurances). 
 2.	Afficher l’inventaire (la liste des assurances) de la compagnie triée en ordre décroissant de prix d’assurance (du plus grand vers le plus petit). 

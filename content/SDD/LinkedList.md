@@ -1,7 +1,7 @@
 +++
 draft = false
 title = 'Algorithmes codage de la liste doublement chaînée'
-weight = 23
+weight = 26
 +++
 
 🌼 Pour coder une liste doublement chaînée en orientée objet, on doit coder :

@@ -6,7 +6,6 @@
     <description>Dans ce chapitre nous allons découvrir quelques structures de données et apprendre à choisir la bonne structure selon le problème.&#xA;Ⓜ️ Le langage Java a élargi et harmonisé la bibliothèque de classes utilitaires (java.util).&#xA;Ⓜ️ On y trouve désormais des classes permettant de manipuler les principales structures de données, c’est-à-dire les vecteurs dynamiques, les ensembles, les listes chaînées, les queues et les tables associatives.&#xA;Ⓜ️ Nous commencerons par examiner les concepts communs qu’elles (structures de données) exploitent ainsi : généricité, itérateur, ordonnancement et relation d’ordre.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/420-311/sdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Les structures de données</title>
@@ -28,6 +27,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-311/sdd/linkedlist/index.html</guid>
       <description>🌼 Pour coder une liste doublement chaînée en orientée objet, on doit coder :&#xA;La classe Lien ou Nœud Nous n’allons pas utiliser la notion de générique. La classe Lien ou nœud possède les champs suivants : Suivant de type Lien ou Nœud; Précédent de type Lien ou Nœud; Valeur de type entier. La classe Lien ou nœud possède les méthodes suivantes: Constructeur avec un paramètre qui sera la valeur; Getter/Setter pour les champs; Méthode d’affichage de la valeur. La classe ListeDoublementChainee Les champs de la classe : Premier de type Lien ou Nœud; Dernier de type Lien ou Nœud. Les méthodes: Un constructeur sans paramètres : ou il faut mettre Premier et Dernier à NULL; Une méthode booléenne estVide () : qui teste si Premier est NULL; Une méthode : public void insererEnDebutListe (int valeur) { Déclarer un nouveau Lien et lui passer la valeur en paramètres de la méthode; Si la liste estVide (){ Dernier = nouveauLien; } Sinon { Premier.Precedent = nouveauLien; nouveauLien.suivant = Premier; } Premier = nouveauLien; }&#xD;Une méthode : public void insererEnFinDeListe (int valeur) { Déclarer un nouveauLien et lui passer la valeur en paramètres de la méthode; Si la liste estVide (){ Premier = nouveauLien; } Sinon { Dernier.suivant = nouveauLien; nouveauLien.precedent = Dernier; } Dernier = nouveauLien; }&#xD;public boolean insererApresValeur (int valeurPosition, int valeurAInserer) { Lien courant = premier; Tant que (courant.valeur n’est pas égale à valeurPosition){ courant = courant.suivant; si (courant est NULL) { retourner FALSE; } Déclarer un nouveauLien et lui passer la valeurAInserer en paramètres de la méthode; Si (courant = Dernier){ nouveauLien.suivant = null; dernier = nouveauLien; } Sinon { nouveauLien.suivant = courant.suivant; courant.suivant.precedent = nouveauLien; } nouveauLien.precedent = courant; courant.suivant = nouveauLien; retourner true; // on a trouvé, on insére &#34;valeurAInserer&#34; } }</description>
+    </item>
+    <item>
+      <title>Comparable Vs Comparator</title>
+      <link>http://localhost:1313/420-311/sdd/compare/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/compare/index.html</guid>
+      <description>🌼 Différence entre L’interface Comparator et Comparable&#xA;🌼 Comparator et comparable sont deux interfaces de l’API Java.&#xA;🌼 Il est souvent nécessaire de trier les objets stockés dans des collections ou tableaux (Array). En utilisant ces 02 interfaces, objets Java peuvent être triés dans un ordre prédéfini .&#xA;Comparator est défini dans le package java.util Comparable est défini dans le paquet java.lang Comparable 🧭 Un objet implémentant Comparable est capable de se comparer avec un autre objet . La classe elle-même doit implémente l’interface java.lang.Comparable afin de comparer ses instances.</description>
+    </item>
+    <item>
+      <title>📖 Le hachage</title>
+      <link>http://localhost:1313/420-311/sdd/hachage/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-311/sdd/hachage/index.html</guid>
+      <description>Définition Le hachage est une technique qui consiste à transformer une donnée (clé) en un nombre entier appelé code de hachage (hash code). ➡️ Ce nombre sert d’adresse pour placer ou retrouver rapidement la donnée dans une table.&#xA;👉 Exemple simple :&#xA;Clé = &#34;Alice&#34; Fonction de hachage → produit un entier 12345 Cet entier est utilisé comme position pour stocker la valeur associée. La méthode hashCode() en Java Dans Java, chaque objet hérite de la méthode :</description>
     </item>
     <item>
       <title>📝 Exercices : Collections en Java</title>
