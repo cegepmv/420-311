@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-311/livereload" data-no-instant defer></script>
+  <head><script src="/420-311/livereload.js?mindelay=10&amp;v=2&amp;port=52685&amp;path=420-311/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.148.2">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Complexité algorithmique :: Structures de donnée">
     <meta name="twitter:description" content="Dans ce chapitre, nous allons voir ce que signifie la notation Big-O et analyser la complexité d’un algorithme simple, ainsi que comparer plusieurs approches pour résoudre un même problème. En fin, nous allons voir comment mesurer expérimentalement la performance d’un programme en Java.">
-    <meta property="og:url" content="http://localhost:1313/420-311/complexalgo/index.html">
+    <meta property="og:url" content="http://localhost:52685/420-311/complexalgo/index.html">
     <meta property="og:site_name" content="Structures de donnée">
     <meta property="og:title" content="Complexité algorithmique :: Structures de donnée">
     <meta property="og:description" content="Dans ce chapitre, nous allons voir ce que signifie la notation Big-O et analyser la complexité d’un algorithme simple, ainsi que comparer plusieurs approches pour résoudre un même problème. En fin, nous allons voir comment mesurer expérimentalement la performance d’un programme en Java.">
@@ -23,26 +23,26 @@
     <meta itemprop="wordCount" content="43">
     <title>Complexité algorithmique :: Structures de donnée</title>
     <link href="/420-311/complexalgo/index.xml" rel="alternate" type="application/rss+xml" title="Complexité algorithmique :: Structures de donnée"><link rel="icon" href="/420-311/favicon.png" type="image/png">
-    <link href="/420-311/css/auto-complete/auto-complete.min.css?1758636847" rel="stylesheet">
-    <script src="/420-311/js/auto-complete/auto-complete.min.js?1758636847" defer></script>
-    <script src="/420-311/js/search-lunr.js?1758636847" defer></script>
-    <script src="/420-311/js/search.js?1758636847" defer></script>
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1761236389" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1761236389" defer></script>
+    <script src="/420-311/js/search-lunr.js?1761236389" defer></script>
+    <script src="/420-311/js/search.js?1761236389" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/420-311/searchindex.en.js?1758636847";
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1761236389";
     </script>
-    <script src="/420-311/js/lunr/lunr.min.js?1758636847" defer></script>
-    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1758636847" defer></script>
-    <script src="/420-311/js/lunr/lunr.multi.min.js?1758636847" defer></script>
-    <script src="/420-311/js/lunr/lunr.fr.min.js?1758636847" defer></script>
+    <script src="/420-311/js/lunr/lunr.min.js?1761236389" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1761236389" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1761236389" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1761236389" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['fr'];
     </script>
-    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1758636847" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1758636847" rel="stylesheet"></noscript>
-    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1758636847" rel="stylesheet">
-    <link href="/420-311/css/theme.css?1758636847" rel="stylesheet">
-    <link href="/420-311/css/format-html.css?1758636847" rel="stylesheet" id="R-format-style">
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1761236389" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1761236389" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1761236389" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1761236389" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1761236389" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -50,7 +50,7 @@
       window.relearn.path='\/complexalgo\/index.html';
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-311';
+      window.relearn.absBaseUri='http:\/\/localhost:52685\/420-311';
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -96,6 +96,7 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
+    <link href="/420-311/css/custom.css?1761236389" rel="stylesheet">
   </head>
   <body class="mobile-support html" data-url="/420-311/complexalgo/index.html">
     <div id="R-body" class="default-animation">
@@ -116,7 +117,7 @@
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-311/index.html"><span itemprop="name">Structures de donnée</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Complexité algorithmique</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/sdd/exercicessdd/index.html" title="📝 Exercices : Collections en Java (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/sdd/linkedlist/index.html" title="Algorithmes codage de la liste doublement chaînée (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-311/complexalgo/complexalgo/index.html" title="Complexité algorithmique (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
@@ -198,6 +199,7 @@
             <li class="" data-nav-id="/420-311/complexalgo/exercices/index.html"><a class="padding" href="/420-311/complexalgo/exercices/index.html">📝 Exercices sur complexité algorithmique</a></li></ul></li>
             <li class="" data-nav-id="/420-311/io/index.html"><a class="padding" href="/420-311/io/index.html">4. IO</a><ul id="R-subsections-7e563aa8f1493c3ba33faa85b32d7a3c" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/genericity/index.html"><a class="padding" href="/420-311/genericity/index.html">5. Genericity</a><ul id="R-subsections-5344f74bff0b20bf8e33a4f9dd378967" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/420-311/algosearchsort/index.html"><a class="padding" href="/420-311/algosearchsort/index.html">6. Algorithmes de recherche et de tri</a><ul id="R-subsections-582f2119b0bcbf582cad02c49c806c0c" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/ressourcesutiles/index.html"><a class="padding" href="/420-311/ressourcesutiles/index.html">Ressources utiles</a><ul id="R-subsections-b6ef487f028f369be34f28096a04047f" class="collapsible-menu"></ul></li>
           </ul>
         </div>
@@ -221,8 +223,8 @@
           <br>Creative Commons BY-NC-SA</br></div>
       </div>
     </aside>
-    <script src="/420-311/js/clipboard/clipboard.min.js?1758636847" defer></script>
-    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1758636847" defer></script>
-    <script src="/420-311/js/theme.js?1758636847" defer></script>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1761236389" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1761236389" defer></script>
+    <script src="/420-311/js/theme.js?1761236389" defer></script>
   </body>
 </html>

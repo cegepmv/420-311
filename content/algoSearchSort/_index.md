@@ -1,5 +1,5 @@
 +++
-title = "AlgoSearchSort"
+title = "Algorithmes de recherche et de tri"
 type = "chapter"
 draft = false
 weight = 6 
