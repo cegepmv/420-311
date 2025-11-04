@@ -1,5 +1,4 @@
 +++
-date = '2025-11-04T07:53:49-05:00'
 title = "Threads"
 type = "chapter"
 draft = false
