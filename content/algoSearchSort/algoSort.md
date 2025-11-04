@@ -6,7 +6,7 @@ weight = 62
 
 ## Capsule d'introduction aux algorithmes de tri
 
-{{< video src="/420-311/videos/Les_algorithmes_de_tri.mp4" alt="Capsule d'introduction aux algorithmes de tri" controls="true" loop="true" />}}
+{{< video src="/420-311/videos/Les_algorithmes_de_tri.mp4" alt="Capsule d'introduction aux algorithmes de tri" controls="true" loop="false" />}}
 
 ## Les Algorithmes de Tri Simples (Complexité Quadratique)
 Ce groupe d'algorithmes, bien que souvent moins performants avec une complexité de O(n²), est fondamental pour comprendre les principes de base du tri. Leur simplicité conceptuelle en fait un excellent point de départ pour quiconque s'initie aux structures de données et aux algorithmes.
@@ -146,11 +146,11 @@ public class TriInsertion {
 
 Bien que ces algorithmes simples offrent une base solide, leur complexité quadratique les rend peu pratiques pour les grands ensembles de données. Cela nous amène à explorer une classe d'algorithmes plus efficaces, conçus pour gérer de plus grands volumes d'informations.
 
-## Les Algorithmes de Tri Efficaces (Complexité Logarithmique)
+## Les Algorithmes de tri efficaces (complexité logarithmique)
 
 Les algorithmes de cette catégorie, tels que le tri par fusion et le tri rapide, utilisent des stratégies plus avancées comme l'approche **"diviser pour régner"** pour atteindre une complexité temporelle de **O(n log n)**. Cette performance les rend nettement plus rapides et plus évolutifs que les algorithmes quadratiques, en particulier pour les grands ensembles de données.
 
-### Tri par Fusion (Merge Sort)
+### Tri par fusion (Merge Sort)
 
 Le tri par fusion est un exemple classique de l'approche "diviser pour régner". Il est récursif et garantit une performance stable.
 
@@ -159,14 +159,14 @@ Le tri par fusion est un exemple classique de l'approche "diviser pour régner".
 L'algorithme fonctionne en deux phases distinctes :
 
 1. **Phase de Division** : Le tableau est divisé récursivement en deux moitiés jusqu'à ce que l'on obtienne des sous-tableaux ne contenant qu'un seul élément. Un tableau d'un seul élément est, par définition, déjà trié.
-2. **Phase de Fusion** : Les sous-tableaux triés sont ensuite fusionnés deux par deux de manière ordonnée. Lors de la fusion, les éléments des deux sous-tableaux sont comparés et placés dans un nouveau tableau dans le bon ordre, créant ainsi un tableau plus grand qui est également trié. Ce processus se poursuit jusqu'à ce que tous les sous-tableaux aient été fusionnés en un seul tableau final trié.
+2. **Phase de fusion** : Les sous-tableaux triés sont ensuite fusionnés deux par deux de manière ordonnée. Lors de la fusion, les éléments des deux sous-tableaux sont comparés et placés dans un nouveau tableau dans le bon ordre, créant ainsi un tableau plus grand qui est également trié. Ce processus se poursuit jusqu'à ce que tous les sous-tableaux aient été fusionnés en un seul tableau final trié.
 
-**Complexité Temporelle et Spatiale**
+**Complexité temporelle et spatiale**
 
-- **Complexité Temporelle : O(n log n)**. La division récursive du tableau en moitiés produit **log n** niveaux de division. À **chaque niveau**, la phase de fusion nécessite de parcourir tous les `n` éléments pour les combiner en sous-tableaux triés. Le travail `n` effectué `log n` fois donne une complexité temporelle de O(n log n) dans tous les cas.
-- **Complexité Spatiale : O(n)**. Le principal inconvénient du tri par fusion est sa consommation de mémoire. Des tableaux temporaires sont nécessaires pour stocker les sous-tableaux pendant les phases de division et de fusion. Ce coût en mémoire est le compromis nécessaire pour garantir la vitesse et la stabilité de l'algorithme.
+- **Complexité temporelle : O(n log n)**. La division récursive du tableau en moitiés produit **log n** niveaux de division. À **chaque niveau**, la phase de fusion nécessite de parcourir tous les `n` éléments pour les combiner en sous-tableaux triés. Le travail `n` effectué `log n` fois donne une complexité temporelle de O(n log n) dans tous les cas.
+- **Complexité spatiale : O(n)**. Le principal inconvénient du tri par fusion est sa consommation de mémoire. Des tableaux temporaires sont nécessaires pour stocker les sous-tableaux pendant les phases de division et de fusion. Ce coût en mémoire est le compromis nécessaire pour garantir la vitesse et la stabilité de l'algorithme.
 
-### Tri Rapide (Quicksort)
+### Tri rapide (Quicksort)
 
 Le tri rapide est l'un des algorithmes de tri les plus utilisés en pratique et constitue la base des fonctions de tri intégrées dans de nombreux langages et frameworks, comme `Arrays.sort` en Java.
 
@@ -174,26 +174,26 @@ Le tri rapide est l'un des algorithmes de tri les plus utilisés en pratique et 
 
 Le tri rapide est également un algorithme de type "diviser pour régner". Son mécanisme central repose sur les étapes suivantes :
 
-1. **Choix du Pivot** : Un élément du tableau est sélectionné comme "pivot". Le choix du pivot peut varier (premier, dernier ou un élément aléatoire).
+1. **Choix du pivot** : Un élément du tableau est sélectionné comme "pivot". Le choix du pivot peut varier (premier, dernier ou un élément aléatoire).
 2. **Partitionnement** : Le tableau est réorganisé de telle sorte que tous les éléments plus petits que le pivot se retrouvent à sa gauche, et tous les éléments plus grands se retrouvent à sa droite. Après cette étape, le pivot se trouve à sa position finale correcte dans le tableau trié.
 3. **Récursion** : Le processus de partitionnement est répété récursivement sur les deux sous-tableaux (celui à gauche du pivot et celui à droite).
 
 Il est important de noter que le tri rapide est un algorithme **instable**, car les permutations d'éléments éloignés peuvent modifier l'ordre relatif des éléments de même valeur.
 
-**Complexité Temporelle et Spatiale**
+**Complexité temporelle et spatiale**
 
-- **Complexité Temporelle : O(n log n)**. En moyenne et dans le meilleur des cas, le tri rapide atteint cette complexité quasi-linéaire très efficace.
-- **Complexité Spatiale : O(log n)**. Un avantage clé du tri rapide est qu'il trie "en place", sans nécessiter de tableau auxiliaire pour les données. Cependant, il n'a pas une complexité spatiale de O(1). L'espace est requis par la pile d'appels récursifs, dont la profondeur est en moyenne de O(log n), ce qui le rend très efficace en termes de mémoire.
+- **Complexité temporelle : O(n log n)**. En moyenne et dans le meilleur des cas, le tri rapide atteint cette complexité quasi-linéaire très efficace.
+- **Complexité spatiale : O(log n)**. Un avantage clé du tri rapide est qu'il trie "en place", sans nécessiter de tableau auxiliaire pour les données. Cependant, il n'a pas une complexité spatiale de O(1). L'espace est requis par la pile d'appels récursifs, dont la profondeur est en moyenne de O(log n), ce qui le rend très efficace en termes de mémoire.
 
 ---
 
 Les algorithmes abordés jusqu'à présent reposent tous sur la comparaison directe des éléments pour déterminer leur ordre. Cependant, une autre catégorie d'algorithmes adopte une approche fondamentalement différente, qui peut s'avérer encore plus rapide dans des conditions spécifiques.
 
-## Les Algorithmes de Tri Non Basés sur la Comparaison
+## Les Algorithmes de tri non basés sur la comparaison
 
 Contrairement aux algorithmes précédents, cette catégorie ne compare pas les éléments entre eux. Ils exploitent plutôt des propriétés mathématiques des données, comme leur valeur numérique, pour les classer. Sous certaines conditions, ces algorithmes peuvent atteindre une complexité linéaire, surpassant ainsi les algorithmes basés sur la comparaison.
 
-### Tri par Comptage (Counting Sort)
+### Tri par comptage (Counting Sort)
 
 Cet algorithme est particulièrement efficace pour trier des entiers dans une plage de valeurs limitée.
 
@@ -201,19 +201,19 @@ Cet algorithme est particulièrement efficace pour trier des entiers dans une pl
 
 Le tri par comptage fonctionne en déterminant le nombre d'occurrences de chaque élément dans le tableau d'entrée. Ce décompte est stocké dans un tableau auxiliaire, souvent appelé tableau de "comptes". L'index de ce tableau correspond à la valeur de l'élément, et la valeur à cet index correspond à sa fréquence. Ensuite, ce tableau de comptes est utilisé pour reconstruire le tableau original en plaçant chaque élément le bon nombre de fois dans l'ordre croissant.
 
-**Contraintes et Cas d'Usage**
+**Contraintes et cas d'usage**
 
-- **Hypothèse Clé** : Les valeurs d'entrée doivent être des entiers positifs dans une plage connue et relativement petite (de 0 à `k`).
-- **Gaspillage de Mémoire** : L'algorithme devient inefficace si la plage des valeurs (`k`) est très grande par rapport au nombre d'éléments (`n`). Par exemple, trier quelques nombres dont l'un est `1 000 000` nécessiterait un tableau de comptes d'un million d'éléments, ce qui gaspillerait beaucoup de mémoire.
-- **Cas d'Usage Idéal** : Il est le plus adapté lorsque la plupart des valeurs de la plage sont présentes dans le tableau d'entrée, minimisant ainsi les "trous" (valeurs nulles) dans le tableau de comptes.
+- **Hypothèse clé** : Les valeurs d'entrée doivent être des entiers positifs dans une plage connue et relativement petite (de 0 à `k`).
+- **Gaspillage de mémoire** : L'algorithme devient inefficace si la plage des valeurs (`k`) est très grande par rapport au nombre d'éléments (`n`). Par exemple, trier quelques nombres dont l'un est `1 000 000` nécessiterait un tableau de comptes d'un million d'éléments, ce qui gaspillerait beaucoup de mémoire.
+- **Cas d'usage idéal** : Il est le plus adapté lorsque la plupart des valeurs de la plage sont présentes dans le tableau d'entrée, minimisant ainsi les "trous" (valeurs nulles) dans le tableau de comptes.
 
-**Complexité et Compromis Temps-Mémoire**
+**Complexité et compromis temps-mémoire**
 
-- **Complexité Temporelle : O(n + k)**. Si la plage `k` n'est pas significativement plus grande que le nombre d'éléments `n`, la complexité se simplifie en **O(n)**, soit un temps linéaire.
-- **Complexité Spatiale : O(k)**. L'algorithme nécessite un espace mémoire supplémentaire pour le tableau de comptes, dont la taille dépend de la valeur maximale `k`.
+- **Complexité temporelle : O(n + k)**. Si la plage `k` n'est pas significativement plus grande que le nombre d'éléments `n`, la complexité se simplifie en **O(n)**, soit un temps linéaire.
+- **Complexité spatiale : O(k)**. L'algorithme nécessite un espace mémoire supplémentaire pour le tableau de comptes, dont la taille dépend de la valeur maximale `k`.
 - Ceci illustre un concept clé en informatique : le **compromis temps-mémoire**. Le tri par comptage atteint sa vitesse exceptionnelle en utilisant de la mémoire supplémentaire.
 
-### Tri par Paquets (Bucket Sort)
+### Tri par paquets (Bucket Sort)
 
 Le tri par paquets généralise l'idée du tri par comptage en distribuant les éléments dans plusieurs "paquets".
 
@@ -225,21 +225,21 @@ Le processus se déroule en trois étapes :
 2. **Tri** : Chaque paquet est ensuite trié individuellement. Un autre algorithme de tri, comme le tri par insertion, est généralement utilisé pour cette étape, car il est efficace sur de petits ensembles de données.
 3. **Combinaison** : Enfin, les éléments des paquets triés sont concaténés pour former le tableau final trié.
 
-**Impact du Nombre de Paquets**
+**Impact du nombre de paquets**
 
 La performance du tri par paquets est directement liée au nombre de paquets utilisés. Plus il y a de paquets, plus chaque paquet contient peu d'éléments, ce qui rend leur tri individuel plus rapide. Cependant, un grand nombre de paquets augmente la consommation de mémoire.
 
-**Complexité et Compromis Temps-Mémoire**
+**Complexité et compromis temps-mémoire**
 
-- **Complexité Temporelle : O(n) à O(n²)**. Dans le meilleur des cas, si les éléments sont répartis de manière uniforme dans les paquets, la complexité peut être linéaire, soit **O(n)**. Dans le pire des cas, si tous les éléments tombent dans le même paquet, la complexité devient celle de l'algorithme de tri sous-jacent (par exemple, **O(n²)** si le tri par insertion est utilisé).
-- **Complexité Spatiale : O(n + k)**, où `n` est le nombre d'éléments et `k` le nombre de paquets.
+- **Complexité temporelle : O(n) à O(n²)**. Dans le meilleur des cas, si les éléments sont répartis de manière uniforme dans les paquets, la complexité peut être linéaire, soit **O(n)**. Dans le pire des cas, si tous les éléments tombent dans le même paquet, la complexité devient celle de l'algorithme de tri sous-jacent (par exemple, **O(n²)** si le tri par insertion est utilisé).
+- **Complexité spatiale : O(n + k)**, où `n` est le nombre d'éléments et `k` le nombre de paquets.
 - Cet algorithme est un autre exemple clair du **compromis temps-mémoire**, où l'on sacrifie de la mémoire pour obtenir une exécution plus rapide.
 
 ---
 
 ## ⚙️ **Exemple de fonctionnement**
 
-### 🧩 1. **Tri par Fusion (Merge Sort)**
+### 🧩 1. **Tri par fusion (Merge Sort)**
 
 #### 🔹 Étapes
 
@@ -282,7 +282,7 @@ Fusion [2, 8] et [1, 3, 4] → [1, 2, 3, 4, 8]
 ```
 
 
-### ⚡ 2. **Tri Rapide (Quick Sort)**
+### ⚡ 2. **Tri rapide (Quick Sort)**
 
 #### 🔹 Étapes
 
@@ -316,7 +316,7 @@ Pivot = 3
 Résultat : [1, 2, 3, 4, 8]
 ```
 
-### 🔢 3. **Tri par Comptage (Counting Sort)**
+### 🔢 3. **Tri par comptage (Counting Sort)**
 
 #### 🔹 Étapes
 
@@ -351,7 +351,7 @@ Résultat :    [1, 2, 3, 4, 8]
 ```
 
 
-### 🪣 4. **Tri par Paquets (Bucket Sort)**
+### 🪣 4. **Tri par paquets (Bucket Sort)**
 
 *(exemple simplifié avec 5 seaux pour des entiers entre 1 et 8)*
 
@@ -411,13 +411,13 @@ Seau 4 : [8]
 
 
 ---
-## Tableau Récapitulatif et Conclusion
+## Tableau récapitulatif et Conclusion
 
-### Synthèse des Algorithmes
+### Synthèse des algorithmes
 
 Le tableau ci-dessous résume les caractéristiques clés des algorithmes de tri abordés.
 
-| Algorithme | Complexité Temporelle (Pire Cas) | Complexité Temporelle (Meilleur Cas) | Complexité Spatiale | Stabilité |
+| Algorithme | Complexité Temporelle (Pire Cas) | Complexité Temporelle (Meilleur Cas) | Complexité spatiale | Stabilité |
 | --- | --- | --- | --- | --- |
 | **Tri à Bulles** | O(n²) | O(n) | En place (O(1)) |  |
 | **Tri par Sélection** | O(n²) | O(n²) | En place (O(1)) | Instable |
