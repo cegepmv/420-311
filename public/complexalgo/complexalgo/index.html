@@ -25,26 +25,26 @@ La complexité temporelle, qui mesure le temps d’exécution. La complexité sp
 La complexité temporelle, qui mesure le temps d’exécution. La complexité spatiale, qui évalue la mémoire supplémentaire requise en dehors des données d’entrée. Ces deux aspects sont indépendants : un algorithme peut être très rapide mais consommer beaucoup de mémoire, ou inversement.">
     <meta itemprop="wordCount" content="1184">
     <title>Complexité algorithmique :: Structures de donnée</title><link rel="icon" href="/420-311/favicon.png" type="image/png">
-    <link href="/420-311/css/auto-complete/auto-complete.min.css?1762269000" rel="stylesheet">
-    <script src="/420-311/js/auto-complete/auto-complete.min.js?1762269000" defer></script>
-    <script src="/420-311/js/search-lunr.js?1762269000" defer></script>
-    <script src="/420-311/js/search.js?1762269000" defer></script>
+    <link href="/420-311/css/auto-complete/auto-complete.min.css?1762863007" rel="stylesheet">
+    <script src="/420-311/js/auto-complete/auto-complete.min.js?1762863007" defer></script>
+    <script src="/420-311/js/search-lunr.js?1762863007" defer></script>
+    <script src="/420-311/js/search.js?1762863007" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/420-311/searchindex.en.js?1762269000";
+      window.relearn.index_js_url="/420-311/searchindex.en.js?1762863007";
     </script>
-    <script src="/420-311/js/lunr/lunr.min.js?1762269000" defer></script>
-    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1762269000" defer></script>
-    <script src="/420-311/js/lunr/lunr.multi.min.js?1762269000" defer></script>
-    <script src="/420-311/js/lunr/lunr.fr.min.js?1762269000" defer></script>
+    <script src="/420-311/js/lunr/lunr.min.js?1762863007" defer></script>
+    <script src="/420-311/js/lunr/lunr.stemmer.support.min.js?1762863007" defer></script>
+    <script src="/420-311/js/lunr/lunr.multi.min.js?1762863007" defer></script>
+    <script src="/420-311/js/lunr/lunr.fr.min.js?1762863007" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['fr'];
     </script>
-    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1762269000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1762269000" rel="stylesheet"></noscript>
-    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1762269000" rel="stylesheet">
-    <link href="/420-311/css/theme.css?1762269000" rel="stylesheet">
-    <link href="/420-311/css/format-html.css?1762269000" rel="stylesheet" id="R-format-style">
+    <link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1762863007" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-311/fonts/fontawesome/css/fontawesome-all.min.css?1762863007" rel="stylesheet"></noscript>
+    <link href="/420-311/css/perfect-scrollbar/perfect-scrollbar.min.css?1762863007" rel="stylesheet">
+    <link href="/420-311/css/theme.css?1762863007" rel="stylesheet">
+    <link href="/420-311/css/format-html.css?1762863007" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -98,7 +98,7 @@ La complexité temporelle, qui mesure le temps d’exécution. La complexité sp
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="/420-311/css/custom.css?1762269000" rel="stylesheet">
+    <link href="/420-311/css/custom.css?1762863007" rel="stylesheet">
   </head>
   <body class="mobile-support html" data-url="/420-311/complexalgo/complexalgo/index.html">
     <div id="R-body" class="default-animation">
@@ -243,8 +243,8 @@ La complexité temporelle, qui mesure le temps d’exécution. La complexité sp
 <li>Pour <strong>n petit</strong>, toutes les méthodes semblent rapides.</li>
 <li>Pour <strong>n grand</strong>, seules les bonnes structures/algorithmes tiennent la route.</li>
 </ul>
-<p><a href="#R-image-8cf94fe1542dc5526261f0e9d48cb25e" class="lightbox-link"><img alt="Complexité algorithmique" class="lazy lightbox figure-image" loading="lazy" src="/420-311/images/Complex_algo.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cf94fe1542dc5526261f0e9d48cb25e"><img alt="Complexité algorithmique" class="lazy lightbox lightbox-image" loading="lazy" src="/420-311/images/Complex_algo.png"></a></p>
+<p><a href="#R-image-3f19192d5899bd8b898dfbfe6c25bf1c" class="lightbox-link"><img alt="Complexité algorithmique" class="lazy lightbox figure-image" loading="lazy" src="/420-311/images/Complex_algo.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f19192d5899bd8b898dfbfe6c25bf1c"><img alt="Complexité algorithmique" class="lazy lightbox lightbox-image" loading="lazy" src="/420-311/images/Complex_algo.png"></a></p>
 <h2 id="exemples-en-java">Exemples en Java</h2>
 <h3 id="-o1--affichage-simple">🔹 O(1) – Affichage simple</h3>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">affiche</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> tab) {
@@ -474,6 +474,7 @@ La complexité temporelle, qui mesure le temps d’exécution. La complexité sp
             <li class="" data-nav-id="/420-311/complexalgo/exercices/index.html"><a class="padding" href="/420-311/complexalgo/exercices/index.html">📝 Exercices sur complexité algorithmique</a></li></ul></li>
             <li class="" data-nav-id="/420-311/io/index.html"><a class="padding" href="/420-311/io/index.html">4. IO</a><ul id="R-subsections-7e563aa8f1493c3ba33faa85b32d7a3c" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/genericity/index.html"><a class="padding" href="/420-311/genericity/index.html">5. Genericity</a><ul id="R-subsections-5344f74bff0b20bf8e33a4f9dd378967" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/420-311/unittests/index.html"><a class="padding" href="/420-311/unittests/index.html">6. UnitTests</a><ul id="R-subsections-6ead8fc09c749551b9e243753df404bc" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/algosearchsort/index.html"><a class="padding" href="/420-311/algosearchsort/index.html">6. Algorithmes de recherche et de tri</a><ul id="R-subsections-582f2119b0bcbf582cad02c49c806c0c" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/threads/index.html"><a class="padding" href="/420-311/threads/index.html">7. Threads</a><ul id="R-subsections-4594cb4b04b27a073959a775af2e3432" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/420-311/ressourcesutiles/index.html"><a class="padding" href="/420-311/ressourcesutiles/index.html">Ressources utiles</a><ul id="R-subsections-b6ef487f028f369be34f28096a04047f" class="collapsible-menu"></ul></li>
@@ -499,8 +500,8 @@ La complexité temporelle, qui mesure le temps d’exécution. La complexité sp
           <br>Creative Commons BY-NC-SA</br></div>
       </div>
     </aside>
-    <script src="/420-311/js/clipboard/clipboard.min.js?1762269000" defer></script>
-    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1762269000" defer></script>
-    <script src="/420-311/js/theme.js?1762269000" defer></script>
+    <script src="/420-311/js/clipboard/clipboard.min.js?1762863007" defer></script>
+    <script src="/420-311/js/perfect-scrollbar/perfect-scrollbar.min.js?1762863007" defer></script>
+    <script src="/420-311/js/theme.js?1762863007" defer></script>
   </body>
 </html>
