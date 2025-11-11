@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ressources utiles :: Structures de donnée</title>
-    <link>http://localhost:52685/420-311/ressourcesutiles/index.html</link>
+    <link>http://localhost:1313/420-311/ressourcesutiles/index.html</link>
     <description>Tout au long du cours nous allons utiliser différents outils de développement logiciel largement employés dans l’industrie. Ces outils permettent de travailler de manière plus efficace, professionnelle et collaborative.&#xA;Git : pour gérer les versions du code et collaborer en équipe.&#xA;Maven : pour automatiser la gestion des dépendances et la compilation des projets Java.&#xA;Autres outils : environnements de développement (IDE), plateformes de test, documentation et suivi de projet.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
     <lastBuildDate>Tue, 16 Sep 2025 09:34:50 -0400</lastBuildDate>
-    <atom:link href="http://localhost:52685/420-311/ressourcesutiles/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-311/ressourcesutiles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gestionnaire de source</title>
-      <link>http://localhost:52685/420-311/ressourcesutiles/gestioncodesource/index.html</link>
+      <link>http://localhost:1313/420-311/ressourcesutiles/gestioncodesource/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:52685/420-311/ressourcesutiles/gestioncodesource/index.html</guid>
+      <guid>http://localhost:1313/420-311/ressourcesutiles/gestioncodesource/index.html</guid>
       <description>Introduction à Git Git est un logiciel de contrôle de version. Il permet de gérer des fichiers et leur évolution dans le temps.&#xA;Il permet de retracer l’origine de chaque modification, de rétablir des versions précédentes et permet l’intégration de modifications effectuées en parallèle.&#xA;Concept Le principe d’un gestionnaire de version est qu’il gère un document comme “une base” à laquelle est ajouté une suite de modifications.&#xA;Il y a un dépôt commun (Remote) et les contributeurs travaillent sur des versions locales.</description>
     </item>
     <item>
       <title>Maven</title>
-      <link>http://localhost:52685/420-311/ressourcesutiles/maven/index.html</link>
+      <link>http://localhost:1313/420-311/ressourcesutiles/maven/index.html</link>
       <pubDate>Tue, 16 Sep 2025 09:34:50 -0400</pubDate>
-      <guid>http://localhost:52685/420-311/ressourcesutiles/maven/index.html</guid>
+      <guid>http://localhost:1313/420-311/ressourcesutiles/maven/index.html</guid>
       <description>Maven (Project Managment Tool) Creation d’un projet maven: Pour créer un projet maven on suit les étape suivantes :&#xA;Dans IntelliJ cliquer sur create new project. Cette fois-ci ne pas choisir java mais maven. Vous pouvez cocher la case Create from archetype. Vous pouvez choisir maven-archetype-quickstart (dans notre cas pas besoin on va configurer notre projet par nous même). cliquez sur next.</description>
     </item>
     <item>
       <title>Cartes mentales</title>
-      <link>http://localhost:52685/420-311/ressourcesutiles/cartesmentales/index.html</link>
+      <link>http://localhost:1313/420-311/ressourcesutiles/cartesmentales/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:52685/420-311/ressourcesutiles/cartesmentales/index.html</guid>
+      <guid>http://localhost:1313/420-311/ressourcesutiles/cartesmentales/index.html</guid>
       <description>Les algorithmes de tri</description>
     </item>
     <item>
       <title>Convention de programmation et de nommage</title>
-      <link>http://localhost:52685/420-311/ressourcesutiles/javaconv/index.html</link>
+      <link>http://localhost:1313/420-311/ressourcesutiles/javaconv/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:52685/420-311/ressourcesutiles/javaconv/index.html</guid>
+      <guid>http://localhost:1313/420-311/ressourcesutiles/javaconv/index.html</guid>
       <description>Nommage des Packages Le nom d’un package doit respecter les conventions suivantes :&#xA;Tout en minuscule. Utiliser seulement [a-z], [0-9] et le point ‘.’ *Ne pas utiliser de tiret ‘-’, d’Under score ‘_’, d’espace, ou d’autres caractères ($, , accents, …). Remarque :&#xA;La convention d’Oracle indique que tout package doit avoir comme root un des packages suivants : com, edu, gov, mil, net, org. Ex : com.monprojet.bean&#xA;Nommage des Classes et Interfaces Le nom d’une classe doit respecter les conventions suivantes :</description>
     </item>
   </channel>
