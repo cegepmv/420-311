@@ -87,10 +87,57 @@ new Worker("W1").start();
 
 > **Important** : on **n’appelle jamais** `run()` directement pour démarrer un thread — on appelle **`start()`** qui confie l’exécution à la JVM/OS. `start()` **ne peut être appelé qu’une fois** par instance, sinon `IllegalThreadStateException`.
 
+Exemple : 
+```java
+public class MonTravail implements Runnable {
+
+    private final String nom;
+
+    public MonTravail(String nom) {
+        this.nom = nom;
+    }
+
+    @Override
+    public void run() {
+        // Code exécuté dans le thread
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(nom + " - étape " + i);
+            try {
+                Thread.sleep(500); // pause de 500 ms
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println(nom + " interrompu");
+                return;
+            }
+        }
+        System.out.println(nom + " terminé.");
+    }
+}
+```
+
+Et dans un main :
+
+```java
+public class App {
+    public static void main(String[] args) {
+        MonTravail travail1 = new MonTravail("Tâche A");
+        MonTravail travail2 = new MonTravail("Tâche B");
+
+        Thread t1 = new Thread(travail1, "Thread-A");
+        Thread t2 = new Thread(travail2, "Thread-B");
+
+        t1.start(); // démarre le thread, appelle run() en parallèle
+        t2.start();
+
+        System.out.println("Main continue pendant que A et B travaillent...");
+    }
+}
+```
+
 ### 3.2 Méthodes essentielles de `Thread`
 
 * `start()` : demande à la JVM d’exécuter `run()` dans un **nouveau** thread.
-* `sleep(ms[, ns])` *(statique)* : endort **le thread courant**.
+* `sleep(ms[, ns])` *(statique)* : endort **le thread courant** (doit être entouré d’un try/catch (InterruptedException)).
 * `interrupt()` / `isInterrupted()` / `interrupted()` : **signal d’arrêt** non violent (coopératif).
 * `join()` / `join(timeout)` : **attendre la fin** d’un autre thread.
 * `setPriority(1..10)` : **à éviter** en pratique (portabilité/équité non garanties).
@@ -98,6 +145,22 @@ new Worker("W1").start();
 
 > Méthodes historiques comme `stop()`, `suspend()`, `resume()`, `destroy()` sont **dangereuses/déconseillées** (incohérences d’état). On privilégie **l’interruption** et un **arrêt gracieux**.
 
+#### Exemple avec join()
+Parfois, on veut que le thread principal attende qu’un autre thread finisse.
+
+```java
+Thread t = new Thread(new MonTravail("Tâche C"));
+t.start();
+
+// attendre que t soit terminé
+try {
+    t.join();
+} catch (InterruptedException e) {
+    Thread.currentThread().interrupt();
+}
+System.out.println("Tâche C terminée, on continue.");
+
+```
 ### 3.3 Cycle de vie (états)
 
 ![Thread lifecycle](/420-311/images/Thread_lifecycle2.png)
@@ -241,6 +304,25 @@ synchronized (verrou) {
 
 * **Rappel** : le verrou est lié à **l’objet** (ou à la `Class` pour static).
 
+#### Exemple :
+
+Ici, si deux threads appellent incrementer() en même temps, l’un attendra que l’autre ait fini.
+```java
+public class Compteur {
+    private int valeur = 0;
+
+    public synchronized void incrementer() {
+        valeur++;
+    }
+
+    public synchronized int getValeur() {
+        return valeur;
+    }
+}
+```
+Le mot-clé synchronized permet de dire : 
+> « Un seul thread à la fois peut exécuter ce bloc de code. »
+
 ### 5.2 Attente et notification 
 * Il arrive que l’on ait besoin de coordonner l’exécution de threads, un thread devant attendre qu’un autre ait effectué une certaine tâche pour continuer son exécution.
 
@@ -262,24 +344,57 @@ synchronized (verrou) {
 * `wait()` libère le verrou et met le thread en attente.
 * `notifyAll()` réveille **tous** les threads en attente (préféré à `notify()`).
 
-Exemple (file 1-élément) :
-
 ```java
-class Boite {
-  private Integer item = null;
-  public synchronized void produire(int x) throws InterruptedException {
-    while (item != null) wait();
-    item = x;
-    notifyAll();
-  }
-  public synchronized int consommer() throws InterruptedException {
-    while (item == null) wait();
-    int x = item; item = null;
-    notifyAll();
-    return x;
-  }
+import java.util.ArrayList;
+import java.util.List;
+
+public class FileTaches {
+
+    private final List<String> taches = new ArrayList<>();
+    private final int capaciteMax;
+
+    public FileTaches(int capaciteMax) {
+        this.capaciteMax = capaciteMax;
+    }
+
+    // Producteur : ajoute une tâche
+    public void ajouter(String tache) throws InterruptedException {
+        synchronized (taches) {
+            // Tant que la file est pleine, on attend
+            while (taches.size() == capaciteMax) {
+                taches.wait();
+            }
+            taches.add(tache);
+            // On réveille les consommateurs potentiels
+            taches.notifyAll();
+        }
+    }
+
+    // Consommateur : retire une tâche
+    public String retirer() throws InterruptedException {
+        synchronized (taches) {
+            // Tant qu'il n'y a rien, on attend
+            while (taches.isEmpty()) {
+                taches.wait();
+            }
+            String t = taches.remove(0);
+            // On réveille les producteurs potentiels (qui attendaient une place)
+            taches.notifyAll();
+            return t;
+        }
+    }
 }
 ```
+#### Points clés :
+
+- On utilise toujours while et pas if autour de wait() :
+  - pour se protéger des réveils intempestifs (spurious wakeups),
+  - pour re-vérifier la condition après le réveil (taille de la liste).
+- On synchronise sur le même objet (taches) dans les deux méthodes.
+- wait() :
+  - libère le verrou sur taches,
+  - met le thread en attente,
+  - le thread se réveille quand quelqu’un fait notify() / notifyAll() sur taches et qu’il peut reprendre le verrou.
 
 ### 5.3 Alternatives modernes (recommandé)
 
@@ -287,21 +402,53 @@ class Boite {
 * **Queues bloquantes** : `BlockingQueue` (`Array/LinkedBlockingQueue`, `SynchronousQueue`) pour **producteur/consommateur**.
 * **Synchronisateurs** : `CountDownLatch`, `CyclicBarrier`, `Phaser`, `Semaphore`.
 
-#### Producteurs/Consommateurs avec `BlockingQueue`
+#### Producteurs/Consommateurs simplifié
 
 ```java
-import java.util.concurrent.*;
+public class FileTaches {
+    private final List<String> taches = new ArrayList<>();
 
-public class PC {
-  public static void main(String[] args) throws Exception {
-    BlockingQueue<String> q = new ArrayBlockingQueue<>(100);
-    ExecutorService pool = Executors.newFixedThreadPool(3);
-    var prod = pool.submit(() -> { for (int i=0;i<1_000;i++) q.put("msg-"+i); return null; });
-    var cons1 = pool.submit(() -> { while (!Thread.currentThread().isInterrupted()) System.out.println(q.take()); });
-    var cons2 = pool.submit(() -> { while (!Thread.currentThread().isInterrupted()) System.out.println(q.take()); });
+    public synchronized void ajouterTache(String t) {
+        taches.add(t);
+    }
 
-    prod.get(); pool.shutdownNow(); pool.awaitTermination(2, TimeUnit.SECONDS);
-  }
+    public synchronized String retirerTache() {
+        if (taches.isEmpty()) {
+            return null;
+        }
+        return taches.remove(0);
+    }
+}
+```
+Thread consommateur :
+
+```java
+public class Travailleur implements Runnable {
+
+    private final FileTaches file;
+
+    public Travailleur(FileTaches file) {
+        this.file = file;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            String tache = file.retirerTache();
+            if (tache == null) {
+                try {
+                    Thread.sleep(50); // rien à faire pour l’instant
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+                continue;
+            }
+
+            System.out.println("Traitement de : " + tache);
+            // … traitement + sleep
+        }
+    }
 }
 ```
 
@@ -360,53 +507,9 @@ class CompteurLock {
 }
 ```
 
-## 6) Exécution asynchrone : pools, futures, composition
+## 6) Interruption et arrêt **gracieux**
 
-### 6.1 `ExecutorService` : déléguer l’exécution à un **pool**
-
-```java
-import java.util.concurrent.*;
-
-public class DemoExecutor {
-  public static void main(String[] args) throws Exception {
-    ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-    try {
-      Future<Long> f = pool.submit(() -> {
-        long s=0; for (int i=0;i<5_000_000;i++) s += i; return s;
-      });
-      System.out.println("Somme = " + f.get()); // bloquant
-    } finally {
-      pool.shutdown(); pool.awaitTermination(5, TimeUnit.SECONDS);
-    }
-  }
-}
-```
-
-* **Tailles de pool** : proche du nombre de cœurs pour tâches **CPU-bound**; `newCachedThreadPool()` pour **I/O-bound**.
-
-### 6.2 `CompletableFuture` : pipelines non bloquants
-
-```java
-import java.util.concurrent.*;
-
-public class DemoCF {
-  public static void main(String[] args) {
-    CompletableFuture.supplyAsync(() -> 21)
-      .thenApply(x -> x * 2)                 // 42
-      .thenCombine(CompletableFuture.supplyAsync(() -> 1), Integer::sum) // 43
-      .orTimeout(500, TimeUnit.MILLISECONDS)
-      .exceptionally(ex -> -1)
-      .thenAccept(System.out::println)
-      .join(); // attendre la fin sans try/catch
-  }
-}
-```
-
-* Opérateurs : `thenApply/Compose`, `thenCombine`, `allOf/anyOf`, `handle`, `exceptionally`, `orTimeout/completeOnTimeout`.
-
-## 7) Interruption et arrêt **gracieux**
-
-### 7.1 Patron d’interruption
+### 6.1 Patron d’interruption
 
 ```java
 class TacheLongue implements Runnable {
@@ -423,7 +526,7 @@ class TacheLongue implements Runnable {
 }
 ```
 
-### 7.2 Arrêter un pool proprement
+### 6.2 Arrêter un pool proprement
 
 ```java
 pool.shutdown();                       // plus de nouvelles tâches
@@ -432,9 +535,9 @@ if (!pool.awaitTermination(5, SECONDS)) {
 }
 ```
 
-## 8) Deadlocks : comprendre, reproduire, corriger
+## 7) Deadlocks : comprendre, reproduire, corriger
 
-### 8.1 Exemple de deadlock
+### 7.1 Exemple de deadlock
 
 ```java
 public class Deadlock {
@@ -466,7 +569,7 @@ public class Deadlock {
 
 → t1 **garde A** et attend B, t2 **garde B** et attend A : **boucle d’attente**.
 
-### 8.2 Stratégies d’évitement
+### 7.2 Stratégies d’évitement
 
 * **Ordonnancement global** des verrous : **toujours les acquérir dans le même ordre**.
 
@@ -481,7 +584,7 @@ void travail(Object first, Object second) {
 * `tryLock(timeout)` + **backoff** (avec `ReentrantLock`).
 * **Réduire la granularité** et la **durée** des sections critiques.
 
-## 9) Bonnes pratiques (robustesse, performance, portabilité)
+## 8) Bonnes pratiques (robustesse, performance, portabilité)
 
 * **Immuabilité d’abord** : partager des objets immuables évite des verrous.
 * **Confinement de thread** : chaque thread possède son état (ou `ThreadLocal`).
@@ -493,9 +596,9 @@ void travail(Object first, Object second) {
 * **Tester sous charge** (courses, contention, interblocages).
 * **Séparer CPU-bound / I/O-bound** en pools dédiés (évite la famine).
 
-## 10) Exemples rapides “prêts à exécuter”
+## 9) Exemples à tester
 
-### 10.1 Mesurer une course (race) puis corriger
+### 9.1 Mesurer une course (race) puis corriger
 
 ```java
 // Non thread-safe
@@ -505,7 +608,10 @@ public class Race {
     var c = new Counter();
     var t1 = new Thread(() -> { for(int i=0;i<1_000_000;i++) c.inc(); });
     var t2 = new Thread(() -> { for(int i=0;i<1_000_000;i++) c.inc(); });
-    t1.start(); t2.start(); t1.join(); t2.join();
+    t1.start(); 
+    t2.start(); 
+    t1.join(); 
+    t2.join();
     System.out.println("Attendu=2000000, Obtenu="+c.v);
   }
 }
@@ -519,13 +625,16 @@ public class Atomic {
     var v = new AtomicInteger();
     var t1 = new Thread(() -> { for(int i=0;i<1_000_000;i++) v.incrementAndGet(); });
     var t2 = new Thread(() -> { for(int i=0;i<1_000_000;i++) v.incrementAndGet(); });
-    t1.start(); t2.start(); t1.join(); t2.join();
+    t1.start(); 
+    t2.start(); 
+    t1.join(); 
+    t2.join();
     System.out.println("Résultat="+v.get());
   }
 }
 ```
 
-### 10.2 `invokeAny` / `invokeAll` (meilleur et tous les résultats)
+### 9.2 `invokeAny` / `invokeAll` (meilleur et tous les résultats)
 
 ```java
 import java.util.*;
@@ -542,18 +651,23 @@ public class Invoke {
       );
       String fastest = pool.invokeAny(taches); // le plus rapide
       System.out.println("Plus rapide = " + fastest);
-      for (Future<String> f : pool.invokeAll(taches)) System.out.println(f.get());
-    } finally { pool.shutdown(); }
+      for (Future<String> f : pool.invokeAll(taches)) 
+        System.out.println(f.get());
+    } finally { 
+      pool.shutdown(); 
+    }
   }
 }
 ```
 
-### 10.3 Sémaphore pour limiter l’accès concurrent à une ressource
+### 9.3 Sémaphore pour limiter l’accès concurrent à une ressource
 
 ```java
 import java.util.concurrent.Semaphore;
+
 public class Limiteur {
   static final Semaphore SEM = new Semaphore(2); // 2 en parallèle
+
   static void tache(String nom) {
     try {
       if (SEM.tryAcquire()) {
@@ -562,16 +676,22 @@ public class Limiteur {
       } else {
         System.out.println(nom+" refuse (limite atteinte)");
       }
-    } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
-    finally { if (SEM.availablePermits()<2) SEM.release(); }
+    } catch (InterruptedException e) { 
+      Thread.currentThread().interrupt(); 
+    }
+    finally { 
+      if (SEM.availablePermits()<2) SEM.release(); 
+    }
   }
+
   public static void main(String[] args) {
-    for (int i=0;i<5;i++) new Thread(() -> tache(Thread.currentThread().getName())).start();
+    for (int i=0;i<5;i++) 
+      new Thread(() -> tache(Thread.currentThread().getName())).start();
   }
 }
 ```
 
-## 11) Résumé
+## 10) Résumé
 
 * **Concevoir** le parallélisme : CPU-bound ≠ I/O-bound, **taillez** vos pools.
 * **Protéger** l’état partagé : immuabilité → atomiques → `synchronized`/locks.
