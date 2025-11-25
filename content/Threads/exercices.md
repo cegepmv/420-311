@@ -29,20 +29,6 @@ weight = 82
 - un thread travailleur prend les tâches et les affiche avec un sleep.
 
 
-
-Parfait, on ajoute un **module bonus Sémaphores** pour les curieux·ses, sans que ça devienne obligatoire pour le TP.
-Je te donne :
-
-* une **version étudiant** prête à publier,
-* puis un **corrigé rapide** pour toi à la fin.
-
----
-
-## 🔒 Bonus – Les sémaphores en pratique (exercices)
-
-> Ces exercices sont **optionnels**.
-> Ils ne sont pas nécessaires pour réussir le projet *Rush au resto*, mais ils permettent d’aller plus loin sur la synchronisation entre threads.
-
 ## Exercices avec de `Semaphore`
 
 ### Exercice 1 – Parking à 3 places avec `Semaphore`
