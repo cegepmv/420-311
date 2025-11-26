@@ -198,7 +198,7 @@ Un thread peut passer par plusieurs états lors de son cycle de vie:
 
 ### 3.5 Diagramme d’état C.V.L d’un thread 
 
-![Diagramme d’état thread](/420-311/images/Diagramme_etat_CVL_thread .png)
+![Diagramme d’état thread](/420-311/images/Diagramme_etat_CVL_thread.png)
 
 * Nous avons déjà vu comment un thread pouvait être mis en sommeil ou mis en attente du verrou d’un objet. Nous allons ici faire le point sur les différents "états" dans lesquels peut se trouver un thread et sur les actions qui le font passer d’un état à un autre. Au départ, on crée un objet thread. Tant que l’on ne fait rien, il n’a aucune chance d’être exécuté.
 * L’appel de start rend le thread disponible pour l’exécution. Il est alors considéré comme prêt. L’environnement peut faire passer un thread de l’état prêt à l’état "en cours d’exécution".
