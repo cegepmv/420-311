@@ -4,7 +4,7 @@ title = 'Planifier des threads avec Timer et TimerTask'
 weight = 82
 +++
 
-En Java, la classe java.util.Timer est un utilitaire conçu pour planifier l'exécution d'une java.util.TimerTask dans un thread d'arrière-plan, soit une seule fois après un délai spécifié, soit de manière répétée à intervalles réguliers.
+En Java, la classe `java.util.Timer` est un utilitaire conçu pour planifier l'exécution d'une `java.util.TimerTask` dans un thread d'arrière-plan, soit une seule fois après un délai spécifié, soit de manière répétée à intervalles réguliers.
 
 ## Concepts Clés
 
