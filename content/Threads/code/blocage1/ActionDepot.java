@@ -1,5 +1,3 @@
-package sd.blocage1;
-
 public class ActionDepot implements Runnable{
 	
 	private Compte compte;

@@ -1,4 +1,4 @@
-package sd.blocage1;
+package content.Threads.code.blocage1;
 
 public class MainBlocage1 {
 

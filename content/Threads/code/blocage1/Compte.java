@@ -1,5 +1,3 @@
-package sd.blocage1;
-
 public class Compte {
 
 	private double solde;
