@@ -204,3 +204,4 @@ Cela permet de **se concentrer sur la logique de la tâche** (`run()`) plutôt q
 ## Ressources
 [Oracle : TimerTask](https://docs.oracle.com/javase/8/docs/api/java/util/TimerTask.html)
 
+[Guide to java.util.Timer](https://concurrencydeepdives.com/java-util-timer/)
