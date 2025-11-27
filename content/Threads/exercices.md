@@ -1,28 +1,30 @@
 +++
 draft = false
 title = 'Exercices sur les threads'
-weight = 82
+weight = 83
 +++
 
-## Exercice 1:
+## Exercices Threads simples
 
-### Créer un thread simple
+### Exercice 1:
+
+#### Créer un thread simple
 Écrire une classe Compteur qui :
 - implémente Runnable ;
 - affiche les nombres de 1 à 10 avec Thread.sleep(200) entre chaque ;
 - lancer deux compteurs en parallèle dans main.
 
-## Exercice 2:
+### Exercice 2:
 
-### Partage de données + synchronized
+#### Partage de données + synchronized
 
 - Créer une classe CompteurPartage avec un entier valeur.
 - Deux threads incrémentent valeur 1000 fois chacun, avec et sans synchronized.
 - Observer la différence sur le résultat.
 
-## Exercice 3:
+### Exercice 3:
 
-### Mini producteur / consommateur
+#### Mini producteur / consommateur
 
 - Une liste de String partagée ;
 - le thread principal ajoute des chaînes "Tâche 1", "Tâche 2", … dans la liste ;
@@ -31,7 +33,8 @@ weight = 82
 
 ## Exercices avec de `Semaphore`
 
-### Exercice 1 – Parking à 3 places avec `Semaphore`
+### Exercice 1 
+#### Parking à 3 places avec `Semaphore`
 
 On veut simuler un **petit parking** qui ne peut accueillir que **3 voitures** en même temps.
 
@@ -39,7 +42,7 @@ On veut simuler un **petit parking** qui ne peut accueillir que **3 voitures** e
 * Le parking a une capacité maximale de 3.
 * Si le parking est plein, la voiture doit **attendre** qu’une place se libère.
 
-#### 1.1. Consignes
+#### Consignes
 
 1. Créer une classe `Parking` avec :
 
@@ -60,7 +63,7 @@ On veut simuler un **petit parking** qui ne peut accueillir que **3 voitures** e
 
 3. Dans un `main`, créer **5 threads voitures** (par ex. V1, V2, V3, V4, V5) et les démarrer.
 
-#### 1.2. Résultat attendu (approx.)
+#### Résultat attendu (approx.)
 
 On veut voir quelque chose du genre (l’ordre peut varier) :
 
@@ -82,9 +85,10 @@ V5 entre dans le parking.
 
 > On ne doit jamais voir plus de **3 voitures “dans le parking”** en même temps.
 
----
 
-### Exercice 2 – File de commandes limitée (buffet) avec `Semaphore`
+
+### Exercice 2 
+#### File de commandes limitée (buffet) avec `Semaphore`
 
 On simule un **buffet** où :
 
@@ -96,7 +100,7 @@ On ne veut **jamais** :
 * déposer un plat si le buffer est plein ;
 * retirer un plat si le buffer est vide.
 
-#### 2.1. Sémaphores à utiliser
+#### Sémaphores à utiliser
 
 On va utiliser **2 sémaphores** :
 
@@ -112,7 +116,7 @@ Et **une seule** structure de données partagée :
 * par exemple, un `List<String> buffer = new ArrayList<>();`
 * accès protégé par `synchronized`.
 
-#### 2.2. Consignes
+#### Consignes
 
 1. Créer une classe `Buffet` :
 
@@ -151,7 +155,7 @@ Et **une seule** structure de données partagée :
    * Créer un thread producteur + un thread consommateur.
    * Démarrer les deux.
 
-#### 2.3. Résultat attendu (approx.)
+#### Résultat attendu (approx.)
 
 On veut voir une alternance du style :
 
@@ -168,6 +172,72 @@ Consommateur prend Plat 2
 > Le **buffer** ne doit jamais contenir plus de 3 plats.
 > Le consommateur **n’essaie pas** de prendre un plat quand il n’y en a pas (il attend automatiquement).
 
+---
+
+## Exercices avec `Timer` et `TimerTask`
+### Exercice 1 – Mini horloge console
+
+On veut créer un programme qui affiche une “horloge simulée” dans la console.
+
+#### Spécifications
+
+1. Le programme demande à l’utilisateur un nombre de secondes, par exemple :
+
+   ```text
+   Combien de secondes ? 5
+   ```
+
+2. Le programme démarre un `Timer` qui affiche chaque seconde :
+
+   ```text
+   t = 1 s
+   t = 2 s
+   ...
+   t = N s
+   ```
+
+3. Après `N` secondes, le programme :
+
+   * arrête le `Timer` (annule les tâches),
+   * affiche un message de fin, par exemple :
+
+   ```text
+   Fin du chrono.
+   ```
+
+#### Contraintes
+
+* Utiliser `java.util.Timer` et `java.util.TimerTask`.
+* Ne pas utiliser de boucle `while(true) { Thread.sleep(...); }` pour cette horloge.
+* Bien fermer le `Timer` avec `cancel()` lorsque le chrono est terminé.
+
+#### Pistes
+
+* Créer une classe `ChronoTask` qui étend `TimerTask` et qui :
+
+  * connaît le nombre de secondes max,
+  * incrémente un compteur interne à chaque exécution de `run()`.
+* Dans `main` :
+
+  * lire le nombre de secondes avec un `Scanner`,
+  * créer un `Timer`,
+  * programmer la tâche avec `scheduleAtFixedRate(...)`.
 
 
 
+### Exercice 2 – Minuteur à rebours
+
+Variante : au lieu d’afficher `t = 1 s`, `t = 2 s`, …, on affiche un **compte à rebours** :
+
+Exemple pour 5 secondes :
+
+```text
+Temps restant : 5 s
+Temps restant : 4 s
+Temps restant : 3 s
+Temps restant : 2 s
+Temps restant : 1 s
+BOUM ! (ou un message de votre choix)
+```
+
+* Même principe : `Timer` + `TimerTask`, mais on décrémente au lieu d’incrémenter.
